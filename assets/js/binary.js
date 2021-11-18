@@ -1,4 +1,4 @@
-// meta={"simUrl":"https://trg-arcade.userpxt.io/v1.7.16/---simulator","cdnUrl":"https://pxt.azureedge.net","version":"0.0.5","target":"arcade","targetVersion":"1.7.16","repo":"adri314/snowman-target-practice-game"}
+// meta={"simUrl":"https://trg-arcade.userpxt.io/v1.7.16/---simulator","cdnUrl":"https://pxt.azureedge.net","version":"0.0.6","target":"arcade","targetVersion":"1.7.16","repo":"adri314/snowman-target-practice-game"}
 // total=1629403 new=7.16% cached=87.79% other=5.05%
 (function (ectx) {
 'use strict';
@@ -479,7 +479,7 @@ const pxsim_pxtrt = pxsim.pxtrt;
 const pxsim_numops = pxsim.numops;
 
 
-function _main___P116101(s) {
+function _main___P116327(s) {
 let r0 = s.r0, step = s.pc;
 s.pc = -1;
 
@@ -959,13 +959,13 @@ switch (step) {
     return leave(s, r0)
   default: oops()
 } } }
-_main___P116101.info = {"start":0,"length":0,"line":0,"column":0,"endLine":0,"endColumn":0,"fileName":"pxt_modules/arcade-story/main.ts","functionName":"<main>","argumentNames":[]}
-_main___P116101.continuations = [  ]
+_main___P116327.info = {"start":0,"length":0,"line":0,"column":0,"endLine":0,"endColumn":0,"fileName":"pxt_modules/arcade-story/main.ts","functionName":"<main>","argumentNames":[]}
+_main___P116327.continuations = [  ]
 
-function _main___P116101_mk(s) {
+function _main___P116327_mk(s) {
     checkStack(s.depth);
     return {
-        parent: s, fn: _main___P116101, depth: s.depth + 1,
+        parent: s, fn: _main___P116327, depth: s.depth + 1,
         pc: 0, retval: undefined, r0: undefined, overwrittenPC: false, lambdaArgs: null,
   tmp_0: undefined,
   tmp_1: undefined,
@@ -1548,23 +1548,23 @@ switch (step) {
   case 0:
 
     s.value___116032 = undefined;
-    s.unnamed1162___U1 = undefined;
-    s.unnamed1163___U2 = undefined;
+    s.unnamed1222___U1 = undefined;
+    s.unnamed1223___U2 = undefined;
     s.value___116032 = (undefined);
     s.tmp_0 = sprites_allOfKind__P93528_mk(s);
     s.tmp_0.arg0 = 1;
     s.callLocIdx = 100; s.pc = 5; return s.tmp_0;
   case 5:
     r0 = s.retval;
-    s.unnamed1162___U1 = (r0);
-    s.unnamed1163___U2 = (0);
+    s.unnamed1222___U1 = (r0);
+    s.unnamed1223___U2 = (0);
   case 1:
-    s.tmp_0 = r0 = s.unnamed1163___U2;
-    r0 = pxsim_Array__length(s.unnamed1162___U1);
+    s.tmp_0 = r0 = s.unnamed1223___U2;
+    r0 = pxsim_Array__length(s.unnamed1222___U1);
     s.tmp_1 = r0;
     r0 = (s.tmp_0 < s.tmp_1);
     if (!r0) { step = 4; continue; }
-    r0 = pxsim_Array__getAt(s.unnamed1162___U1, s.unnamed1163___U2);
+    r0 = pxsim_Array__getAt(s.unnamed1222___U1, s.unnamed1223___U2);
     s.value___116032 = (r0);
     s.tmp_4 = Sprite_y__P93586_mk(s);
     s.tmp_4.arg0 = s.value___116032;
@@ -1589,11 +1589,11 @@ switch (step) {
     r0 = s.retval;
   case 2:
   case 3:
-    r0 = (s.unnamed1163___U2 + 1);
-    s.unnamed1163___U2 = (r0);
+    r0 = (s.unnamed1223___U2 + 1);
+    s.unnamed1223___U2 = (r0);
     { step = 1; continue; }
   case 4:
-    s.unnamed1162___U1 = (undefined);
+    s.unnamed1222___U1 = (undefined);
     r0 = undefined;
     return leave(s, r0)
   default: oops()
@@ -1612,8 +1612,8 @@ function inline__P116030_mk(s) {
   tmp_4: undefined,
   tmp_5: undefined,
   value___116032: undefined,
-  unnamed1162___U1: undefined,
-  unnamed1163___U2: undefined,
+  unnamed1222___U1: undefined,
+  unnamed1223___U2: undefined,
 } }
 
 
@@ -54231,5 +54231,5 @@ const sprites_BaseSpriteSayRenderer__C93511_VT = mkVTable({
 
 const breakpoints = setupDebugger(1, ["transparency16___95557","tile1___95558","Target___115917","canThrow___115938","gameOn___115941","target___115974","snowMan___115921","snowBall___115983"])
 
-return _main___P116101
+return _main___P116327
 })
