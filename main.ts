@@ -164,12 +164,14 @@ sprites.onOverlap(SpriteKind.Projectile, SpriteKind.Target, function (sprite, ot
     sprite.destroy(effects.warmRadial, 200)
     info.changeScoreBy(1)
     target.setPosition(randint(20, 150), randint(10, 100))
-    createSnowBall()
 })
 function throwSnowBall () {
     snowBall.throwDart()
     canThrow = false
     music.playTone(131, music.beat(BeatFraction.Half))
+    ballAngle = snowBall.angle
+    ballPower = snowBall.pow
+    createSnowBall()
 }
 info.onCountdownEnd(function () {
     game.over(true)
@@ -207,12 +209,19 @@ function createSnowBall () {
     snowBall.controlWithArrowKeys()
     snowBall.setTrace()
     canThrow = true
+    snowBall.angle = ballAngle
+    snowBall.pow = ballPower
+    snowBall.traceColor = 2
+    snowBall.iter = 2
+    snowBall.angleRate = 2
 }
 let snowBall: Dart = null
 let target: Sprite = null
 let gameOn = false
 let canThrow = false
 let snowMan: Sprite = null
+let ballPower = 0
+let ballAngle = 0
 scene.setBackgroundImage(img`
     9999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999922222222222222222222222222222222222999999999999999999999999999999
     9999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999922222222222222222222222222222222222999999999999999999999999999999
@@ -546,12 +555,13 @@ game.setDialogFrame(img`
     ..................................................................
     `)
 game.showLongText("A - Throw            H arrow keys - Change angle         V arrow keys - Change force", DialogLayout.Full)
+ballAngle = 30
+ballPower = 100
 startGame()
 game.onUpdate(function () {
     for (let value of sprites.allOfKind(SpriteKind.Projectile)) {
         if (value.y > 120) {
             value.destroy()
-            createSnowBall()
         }
     }
 })
