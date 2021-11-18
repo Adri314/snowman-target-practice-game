@@ -1,5 +1,5 @@
-// meta={"simUrl":"https://trg-arcade.userpxt.io/v1.7.16/---simulator","cdnUrl":"https://pxt.azureedge.net","version":"0.0.6","target":"arcade","targetVersion":"1.7.16","repo":"adri314/snowman-target-practice-game"}
-// total=1629403 new=7.16% cached=87.79% other=5.05%
+// meta={"simUrl":"https://trg-arcade.userpxt.io/v1.7.16/---simulator","cdnUrl":"https://pxt.azureedge.net","version":"0.0.7","target":"arcade","targetVersion":"1.7.16","repo":"adri314/snowman-target-practice-game"}
+// total=1620010 new=7.15% cached=87.79% other=5.06%
 (function (ectx) {
 'use strict';
 const runtime = ectx.runtime;
@@ -257,7 +257,6 @@ pxtrt.mapKeyNames = [
  "life",
  "lifeZeroHandler",
  "lifespan",
- "lock",
  "map",
  "maxLifespan",
  "maxNegativeVelocity",
@@ -479,7 +478,7 @@ const pxsim_pxtrt = pxsim.pxtrt;
 const pxsim_numops = pxsim.numops;
 
 
-function _main___P116327(s) {
+function _main___P116602(s) {
 let r0 = s.r0, step = s.pc;
 s.pc = -1;
 
@@ -690,7 +689,6 @@ switch (step) {
     globals.loseSound___95981 = (undefined);
     globals.winSound___95983 = (undefined);
     globals.__isOver___95991 = (false);
-    globals.foreverRunning___95995 = (false);
     s.tmp_0 = scene_systemMenu_initVolume__P96250_mk(s);
     s.callLocIdx = 25; s.pc = 20; return s.tmp_0;
   case 20:
@@ -880,45 +878,45 @@ switch (step) {
     s.callLocIdx = 62; s.pc = 37; return s.tmp_0;
   case 37:
     r0 = s.retval;
-    globals.Target___115917 = (r0);
+    globals.Target___116390 = (r0);
     s.tmp_0 = controller_Button_onEvent__P93461_mk(s);
     s.tmp_0.arg0 = globals.A___93388;
     s.tmp_0.arg1 = 2049;
-    s.tmp_0.arg2 = inline__P115935;
+    s.tmp_0.arg2 = inline__P116408;
     s.callLocIdx = 68; s.pc = 38; return s.tmp_0;
   case 38:
     r0 = s.retval;
     s.tmp_0 = sprites_onOverlap__P93668_mk(s);
     s.tmp_0.arg0 = 1;
-    s.tmp_0.arg1 = globals.Target___115917;
-    s.tmp_0.arg2 = inline__P115963;
+    s.tmp_0.arg1 = globals.Target___116390;
+    s.tmp_0.arg2 = inline__P116436;
     s.callLocIdx = 82; s.pc = 39; return s.tmp_0;
   case 39:
     r0 = s.retval;
     s.tmp_0 = info_onCountdownEnd__P93781_mk(s);
-    s.tmp_0.arg0 = inline__P115990;
+    s.tmp_0.arg0 = inline__P116463;
     s.callLocIdx = 87; s.pc = 40; return s.tmp_0;
   case 40:
     r0 = s.retval;
-    globals.snowBall___115983 = (null);
-    globals.target___115974 = (null);
-    globals.canThrow___115938 = (false);
-    globals.snowMan___115921 = (null);
-    globals.gameOn___115941 = (false);
-    globals.gameOn___115941 = (false);
+    globals.snowBall___116456 = (null);
+    globals.target___116447 = (null);
+    globals.canThrow___116411 = (false);
+    globals.snowMan___116394 = (null);
+    globals.gameOn___116414 = (false);
+    globals.gameOn___116414 = (false);
     s.tmp_0 = scene_setBackgroundColor__P94017_mk(s);
     s.tmp_0.arg0 = 8;
     s.callLocIdx = 93; s.pc = 41; return s.tmp_0;
   case 41:
     r0 = s.retval;
     s.tmp_0 = game_setDialogCursor__P94083_mk(s);
-    r0 = pxsim.image.ofBuffer(_hex116018);
+    r0 = pxsim.image.ofBuffer(_hex116491);
     s.tmp_0.arg0 = r0;
     s.callLocIdx = 94; s.pc = 42; return s.tmp_0;
   case 42:
     r0 = s.retval;
     s.tmp_0 = game_setDialogFrame__P94082_mk(s);
-    r0 = pxsim.image.ofBuffer(_hex116021);
+    r0 = pxsim.image.ofBuffer(_hex116494);
     s.tmp_0.arg0 = r0;
     s.callLocIdx = 95; s.pc = 43; return s.tmp_0;
   case 43:
@@ -941,31 +939,26 @@ switch (step) {
     s.callLocIdx = 98; s.pc = 46; return s.tmp_0;
   case 46:
     r0 = s.retval;
-    s.tmp_0 = startGame__P115945_mk(s);
+    s.tmp_0 = startGame__P116418_mk(s);
     s.callLocIdx = 99; s.pc = 47; return s.tmp_0;
   case 47:
     r0 = s.retval;
     s.tmp_0 = game_onUpdate__P94111_mk(s);
-    s.tmp_0.arg0 = inline__P116030;
+    s.tmp_0.arg0 = inline__P116503;
     s.callLocIdx = 104; s.pc = 48; return s.tmp_0;
   case 48:
-    r0 = s.retval;
-    s.tmp_0 = forever__P93358_mk(s);
-    s.tmp_0.arg0 = inline__P116045;
-    s.callLocIdx = 105; s.pc = 49; return s.tmp_0;
-  case 49:
     r0 = s.retval;
     r0 = undefined;
     return leave(s, r0)
   default: oops()
 } } }
-_main___P116327.info = {"start":0,"length":0,"line":0,"column":0,"endLine":0,"endColumn":0,"fileName":"pxt_modules/arcade-story/main.ts","functionName":"<main>","argumentNames":[]}
-_main___P116327.continuations = [  ]
+_main___P116602.info = {"start":0,"length":0,"line":0,"column":0,"endLine":0,"endColumn":0,"fileName":"pxt_modules/arcade-story/main.ts","functionName":"<main>","argumentNames":[]}
+_main___P116602.continuations = [  ]
 
-function _main___P116327_mk(s) {
+function _main___P116602_mk(s) {
     checkStack(s.depth);
     return {
-        parent: s, fn: _main___P116327, depth: s.depth + 1,
+        parent: s, fn: _main___P116602, depth: s.depth + 1,
         pc: 0, retval: undefined, r0: undefined, overwrittenPC: false, lambdaArgs: null,
   tmp_0: undefined,
   tmp_1: undefined,
@@ -993,8 +986,8 @@ const _hex96276 = pxsim.BufferMethods.createBufferFromHex("870420002000000000000
 const _hex96278 = pxsim.BufferMethods.createBufferFromHex("870420002000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000bbbb00000000000000000000000000b055bb00bbbbbb000000000000000000b0b5bdbcbbbbddcb0000000000000000b0dbcb5b5555bbdd0c00000000000000b0cbdcbdbb5b55dbcd0000000000000000c0dddb11d15bb5bd0c00000000000000bbbd111111b155bb0c00000000000000db1b111111115bb5cb00000000000000db1bb11d1199b9d5cb00000000000000db1b11bb9199b955cb000000000000005b1b11b19b99995bcb000000000000005b1d1111bb99995ccb00000000000000b0b511bbbb99995ccb00000000000000b0d51d919999d95b0b00000000000000005bdb919999c9d50b0000000000000000b0d51b99d9bcb5000000000000000000005bd5bbbc550b00000000000000000000b05b5555bd000000000000000000000000b0bbbb00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000")
 const _hex98062 = pxsim.BufferMethods.createBufferFromHex("87041000100000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000")
 const _hex98066 = pxsim.BufferMethods.createBufferFromHex("87041000100000008811111111111111181111111111111118111111111111111811111111111111181111111111111118111111111111118811111111111111881811111111111188111111111111111811111111111111181111111111111118111111111111111811111111111111181111111111111188111111111111118818111111111111")
-const _hex116018 = pxsim.BufferMethods.createBufferFromHex("870410001000000000000000000000000000000090090000000000002992990000009900291211099999ff9922111191ff2f1f2112111111fff21f1112221211fff2111122221211fff2f11112111111fff211141211111199f9f114121f111f00f9991419111f910090009990111109000000000099990000000000000000000000000000000000")
-const _hex116021 = pxsim.BufferMethods.createBufferFromHex("87044200420000000000000000000000000000000000000000000000000000000000000000000000000000000000a0aa000000000000dddd000000000000dddd0000000000300300000033000000000000005aa30030330300d01111dddddd0d00d01111dddddd0d003039000030530a0000000000aa5335aa3a3939d01d1111d11d11d1dd1d1111d11d11d10d939933aa3a550a0000000030555555553a9939d311111111119111dd111111111191113d9999395a5555a30000000030535555a59399991311111111119919111111111111991931939933335555550a00000000335555a33399391111551111119111111155111111911111939333335555350a00000000a05555a531933311115511111111111111551111111111113133135a5555a30a00000000a03553a511331311111111111111111111111111111111111111115a35550a0000000000a03aa3aa1111111111111111111111111111111111111111191111aaaa5a0a00000000003033131111119111111111111111111111111111111111111151151131a30a0000000000303933115511111111111111111111111111111111111111115115113339330000000000939939115511111111111111111111111111111111111111111111319399390000000030999933111111111111111111111111111111111111111111111111319999330000000030939939111111111111111111111111111111111111111111111111319399390000000000303913911111111111111111111111111111111111111111111191113339030000000000003311111111111111111111111111111111111111111111111111111133000000000000d01d111111111111111111111111111111111111111111111111111111d10d0000000000d011111111111111111111111111111111111111111111111111111111110d00000000001d9111111111111111111111111111111111111111111111111111111111d100000000001d9919111111111111111111111111111111111111111111111111115511110d000000001d9111111111111111111111111111111111111111111111111111115511110d000000001d1111111111111111111111111111111111111111111111111111111111110d00000000dd1111111111111111111111111111111111111111111111111111111111110d00000000dd1111111111111111111111111111111111111111111111111111111111d100000000001d1111111111111111111111111111111111111111111111111111111111dd00000000d0111111111111111111111111111111111111111111111111111111111111dd00000000d0111111111111111111111111111111111111111111111111111111111111d100000000d0111155111111111111111111111111111111111111111111111111111119d100000000d0111155111111111111111111111111111111111111111111111111119199d100000000001d1111111111111111111111111111111111111111111111111111111119d10000000000d011111111111111111111111111111111111111111111111111111111110d0000000000d01d111111111111111111111111111111111111111111111111111111d10d0000000000d01d111111111111111111111111111111111111111111111111111111d10d0000000000d011111111111111111111111111111111111111111111111111111111110d00000000001d9111111111111111111111111111111111111111111111111111111111d100000000001d9919111111111111111111111111111111111111111111111111115511110d000000001d9111111111111111111111111111111111111111111111111111115511110d000000001d1111111111111111111111111111111111111111111111111111111111110d00000000dd1111111111111111111111111111111111111111111111111111111111110d00000000dd1111111111111111111111111111111111111111111111111111111111d100000000001d1111111111111111111111111111111111111111111111111111111111dd00000000d0111111111111111111111111111111111111111111111111111111111111dd00000000d0111111111111111111111111111111111111111111111111111111111111d100000000d0111155111111111111111111111111111111111111111111111111111119d100000000d0111155111111111111111111111111111111111111111111111111119199d100000000001d1111111111111111111111111111111111111111111111111111111119d10000000000d011111111111111111111111111111111111111111111111111111111110d0000000000d01d111111111111111111111111111111111111111111111111111111d10d0000000000003311111111111111111111111111111111111111111111111111111133000000000000309333111911111111111111111111111111111111111111111111193193030000000000939939131111111111111111111111111111111111111111111111119399390300000000339999131111111111111111111111111111111111111111111111113399990300000000939939131111111111111111111111111111111111111111111155119399390000000000339333115115111111111111111111111111111111111111111155113393030000000000a03a13115115111111111111111111111111111111111111191111113133030000000000a0a5aaaa1111911111111111111111111111111111111111111111aa3aa30a0000000000a05553a511111111111111111111111111111111111111113133115a35530a00000000a03a5555a531331311111111111155111111111111115511113339135a55550a00000000a05355553333393911111911111155111111191111115511119399333a55553300000000a05555553333993913919911111111111191991111111111319999395a55553503000000003a5555a5939999d311191111111111dd111911111111113d9399a3555555550300000000a055a3aa339939d01d11d11d1111d1dd1d11d11d1111d10d9393a3aa5335aa0000000000a035030000930300d0dddddd11110d00d0dddddd11110d00303303003aa5000000000000003300000030030000000000dddd000000000000dddd000000000000aa0a0000000000000000000000000000000000000000000000000000000000000000000000000000000000")
+const _hex116491 = pxsim.BufferMethods.createBufferFromHex("870410001000000000000000000000000000000090090000000000002992990000009900291211099999ff9922111191ff2f1f2112111111fff21f1112221211fff2111122221211fff2f11112111111fff211141211111199f9f114121f111f00f9991419111f910090009990111109000000000099990000000000000000000000000000000000")
+const _hex116494 = pxsim.BufferMethods.createBufferFromHex("87044200420000000000000000000000000000000000000000000000000000000000000000000000000000000000a0aa000000000000dddd000000000000dddd0000000000300300000033000000000000005aa30030330300d01111dddddd0d00d01111dddddd0d003039000030530a0000000000aa5335aa3a3939d01d1111d11d11d1dd1d1111d11d11d10d939933aa3a550a0000000030555555553a9939d311111111119111dd111111111191113d9999395a5555a30000000030535555a59399991311111111119919111111111111991931939933335555550a00000000335555a33399391111551111119111111155111111911111939333335555350a00000000a05555a531933311115511111111111111551111111111113133135a5555a30a00000000a03553a511331311111111111111111111111111111111111111115a35550a0000000000a03aa3aa1111111111111111111111111111111111111111191111aaaa5a0a00000000003033131111119111111111111111111111111111111111111151151131a30a0000000000303933115511111111111111111111111111111111111111115115113339330000000000939939115511111111111111111111111111111111111111111111319399390000000030999933111111111111111111111111111111111111111111111111319999330000000030939939111111111111111111111111111111111111111111111111319399390000000000303913911111111111111111111111111111111111111111111191113339030000000000003311111111111111111111111111111111111111111111111111111133000000000000d01d111111111111111111111111111111111111111111111111111111d10d0000000000d011111111111111111111111111111111111111111111111111111111110d00000000001d9111111111111111111111111111111111111111111111111111111111d100000000001d9919111111111111111111111111111111111111111111111111115511110d000000001d9111111111111111111111111111111111111111111111111111115511110d000000001d1111111111111111111111111111111111111111111111111111111111110d00000000dd1111111111111111111111111111111111111111111111111111111111110d00000000dd1111111111111111111111111111111111111111111111111111111111d100000000001d1111111111111111111111111111111111111111111111111111111111dd00000000d0111111111111111111111111111111111111111111111111111111111111dd00000000d0111111111111111111111111111111111111111111111111111111111111d100000000d0111155111111111111111111111111111111111111111111111111111119d100000000d0111155111111111111111111111111111111111111111111111111119199d100000000001d1111111111111111111111111111111111111111111111111111111119d10000000000d011111111111111111111111111111111111111111111111111111111110d0000000000d01d111111111111111111111111111111111111111111111111111111d10d0000000000d01d111111111111111111111111111111111111111111111111111111d10d0000000000d011111111111111111111111111111111111111111111111111111111110d00000000001d9111111111111111111111111111111111111111111111111111111111d100000000001d9919111111111111111111111111111111111111111111111111115511110d000000001d9111111111111111111111111111111111111111111111111111115511110d000000001d1111111111111111111111111111111111111111111111111111111111110d00000000dd1111111111111111111111111111111111111111111111111111111111110d00000000dd1111111111111111111111111111111111111111111111111111111111d100000000001d1111111111111111111111111111111111111111111111111111111111dd00000000d0111111111111111111111111111111111111111111111111111111111111dd00000000d0111111111111111111111111111111111111111111111111111111111111d100000000d0111155111111111111111111111111111111111111111111111111111119d100000000d0111155111111111111111111111111111111111111111111111111119199d100000000001d1111111111111111111111111111111111111111111111111111111119d10000000000d011111111111111111111111111111111111111111111111111111111110d0000000000d01d111111111111111111111111111111111111111111111111111111d10d0000000000003311111111111111111111111111111111111111111111111111111133000000000000309333111911111111111111111111111111111111111111111111193193030000000000939939131111111111111111111111111111111111111111111111119399390300000000339999131111111111111111111111111111111111111111111111113399990300000000939939131111111111111111111111111111111111111111111155119399390000000000339333115115111111111111111111111111111111111111111155113393030000000000a03a13115115111111111111111111111111111111111111191111113133030000000000a0a5aaaa1111911111111111111111111111111111111111111111aa3aa30a0000000000a05553a511111111111111111111111111111111111111113133115a35530a00000000a03a5555a531331311111111111155111111111111115511113339135a55550a00000000a05355553333393911111911111155111111191111115511119399333a55553300000000a05555553333993913919911111111111191991111111111319999395a55553503000000003a5555a5939999d311191111111111dd111911111111113d9399a3555555550300000000a055a3aa339939d01d11d11d1111d1dd1d11d11d1111d10d9393a3aa5335aa0000000000a035030000930300d0dddddd11110d00d0dddddd11110d00303303003aa5000000000000003300000030030000000000dddd000000000000dddd000000000000aa0a0000000000000000000000000000000000000000000000000000000000000000000000000000000000")
 
 
 
@@ -1389,7 +1382,7 @@ function myTiles_inline__P98110_mk(s) {
 
 
 
-function inline__P115935(s) {
+function inline__P116408(s) {
 let r0 = s.r0, step = s.pc;
 s.pc = -1;
 
@@ -1399,19 +1392,19 @@ if (yieldSteps-- < 0 && maybeYield(s, step, r0) || runtime !== pxsim.runtime) re
 switch (step) {
   case 0:
 
-    s.tmp_0 = r0 = globals.canThrow___115938;
+    s.tmp_0 = r0 = globals.canThrow___116411;
     r0 = pxsim_numops_toBool(s.tmp_0);
     if (r0) { step = 1; continue; }
     r0 = s.tmp_0;
     { step = 2; continue; }
   case 1:
-    r0 = globals.gameOn___115941;
+    r0 = globals.gameOn___116414;
   case 2:
     // jmp value (already in r0)
     s.tmp_1 = r0;
     r0 = pxsim_numops_toBoolDecr(s.tmp_1);
     if (!r0) { step = 3; continue; }
-    s.tmp_2 = throwSnowBall__P115944_mk(s);
+    s.tmp_2 = throwSnowBall__P116417_mk(s);
     s.callLocIdx = 67; s.pc = 5; return s.tmp_2;
   case 5:
     r0 = s.retval;
@@ -1421,12 +1414,12 @@ switch (step) {
     return leave(s, r0)
   default: oops()
 } } }
-inline__P115935.info = {"start":952,"length":75,"line":25,"column":52,"endLine":29,"endColumn":1,"fileName":"main.ts","functionName":"inline","argumentNames":[]}
+inline__P116408.info = {"start":952,"length":75,"line":25,"column":52,"endLine":29,"endColumn":1,"fileName":"main.ts","functionName":"inline","argumentNames":[]}
 
-function inline__P115935_mk(s) {
+function inline__P116408_mk(s) {
     checkStack(s.depth);
     return {
-        parent: s, fn: inline__P115935, depth: s.depth + 1,
+        parent: s, fn: inline__P116408, depth: s.depth + 1,
         pc: 0, retval: undefined, r0: undefined, overwrittenPC: false, lambdaArgs: null,
   tmp_0: undefined,
   tmp_1: undefined,
@@ -1437,7 +1430,7 @@ function inline__P115935_mk(s) {
 
 
 
-function inline__P115963(s) {
+function inline__P116436(s) {
 let r0 = s.r0, step = s.pc;
 s.pc = -1;
 
@@ -1471,7 +1464,7 @@ switch (step) {
   case 3:
     r0 = s.retval;
     s.tmp_0 = Sprite_setPosition__P93631_mk(s);
-    s.tmp_0.arg0 = globals.target___115974;
+    s.tmp_0.arg0 = globals.target___116447;
     r0 = pxsim.Math_.randomRange(20, 150);
     s.tmp_0.arg1 = r0;
     r0 = pxsim.Math_.randomRange(10, 100);
@@ -1479,7 +1472,7 @@ switch (step) {
     s.callLocIdx = 80; s.pc = 4; return s.tmp_0;
   case 4:
     r0 = s.retval;
-    s.tmp_0 = createSnowBall__P115953_mk(s);
+    s.tmp_0 = createSnowBall__P116426_mk(s);
     s.callLocIdx = 81; s.pc = 5; return s.tmp_0;
   case 5:
     r0 = s.retval;
@@ -1487,12 +1480,12 @@ switch (step) {
     return leave(s, r0)
   default: oops()
 } } }
-inline__P115963.info = {"start":21605,"length":212,"line":161,"column":60,"endLine":167,"endColumn":1,"fileName":"main.ts","functionName":"inline","argumentNames":["sprite","otherSprite"]}
+inline__P116436.info = {"start":21605,"length":212,"line":161,"column":60,"endLine":167,"endColumn":1,"fileName":"main.ts","functionName":"inline","argumentNames":["sprite","otherSprite"]}
 
-function inline__P115963_mk(s) {
+function inline__P116436_mk(s) {
     checkStack(s.depth);
     return {
-        parent: s, fn: inline__P115963, depth: s.depth + 1,
+        parent: s, fn: inline__P116436, depth: s.depth + 1,
         pc: 0, retval: undefined, r0: undefined, overwrittenPC: false, lambdaArgs: null,
   tmp_0: undefined,
   arg0: undefined,
@@ -1503,7 +1496,7 @@ function inline__P115963_mk(s) {
 
 
 
-function inline__P115990(s) {
+function inline__P116463(s) {
 let r0 = s.r0, step = s.pc;
 s.pc = -1;
 
@@ -1523,12 +1516,12 @@ switch (step) {
     return leave(s, r0)
   default: oops()
 } } }
-inline__P115990.info = {"start":21970,"length":35,"line":173,"column":20,"endLine":175,"endColumn":1,"fileName":"main.ts","functionName":"inline","argumentNames":[]}
+inline__P116463.info = {"start":21970,"length":35,"line":173,"column":20,"endLine":175,"endColumn":1,"fileName":"main.ts","functionName":"inline","argumentNames":[]}
 
-function inline__P115990_mk(s) {
+function inline__P116463_mk(s) {
     checkStack(s.depth);
     return {
-        parent: s, fn: inline__P115990, depth: s.depth + 1,
+        parent: s, fn: inline__P116463, depth: s.depth + 1,
         pc: 0, retval: undefined, r0: undefined, overwrittenPC: false, lambdaArgs: null,
   tmp_0: undefined,
 } }
@@ -1537,7 +1530,7 @@ function inline__P115990_mk(s) {
 
 
 
-function inline__P116030(s) {
+function inline__P116503(s) {
 let r0 = s.r0, step = s.pc;
 s.pc = -1;
 
@@ -1547,27 +1540,27 @@ if (yieldSteps-- < 0 && maybeYield(s, step, r0) || runtime !== pxsim.runtime) re
 switch (step) {
   case 0:
 
-    s.value___116032 = undefined;
-    s.unnamed1222___U1 = undefined;
-    s.unnamed1223___U2 = undefined;
-    s.value___116032 = (undefined);
+    s.value___116505 = undefined;
+    s.unnamed1262___U1 = undefined;
+    s.unnamed1263___U2 = undefined;
+    s.value___116505 = (undefined);
     s.tmp_0 = sprites_allOfKind__P93528_mk(s);
     s.tmp_0.arg0 = 1;
     s.callLocIdx = 100; s.pc = 5; return s.tmp_0;
   case 5:
     r0 = s.retval;
-    s.unnamed1222___U1 = (r0);
-    s.unnamed1223___U2 = (0);
+    s.unnamed1262___U1 = (r0);
+    s.unnamed1263___U2 = (0);
   case 1:
-    s.tmp_0 = r0 = s.unnamed1223___U2;
-    r0 = pxsim_Array__length(s.unnamed1222___U1);
+    s.tmp_0 = r0 = s.unnamed1263___U2;
+    r0 = pxsim_Array__length(s.unnamed1262___U1);
     s.tmp_1 = r0;
     r0 = (s.tmp_0 < s.tmp_1);
     if (!r0) { step = 4; continue; }
-    r0 = pxsim_Array__getAt(s.unnamed1222___U1, s.unnamed1223___U2);
-    s.value___116032 = (r0);
+    r0 = pxsim_Array__getAt(s.unnamed1262___U1, s.unnamed1263___U2);
+    s.value___116505 = (r0);
     s.tmp_4 = Sprite_y__P93586_mk(s);
-    s.tmp_4.arg0 = s.value___116032;
+    s.tmp_4.arg0 = s.value___116505;
     s.callLocIdx = 101; s.pc = 6; return s.tmp_4;
   case 6:
     r0 = s.retval;
@@ -1577,33 +1570,33 @@ switch (step) {
     r0 = pxsim_numops_toBoolDecr(s.tmp_2);
     if (!r0) { step = 2; continue; }
     s.tmp_5 = Sprite_destroy__P93649_mk(s);
-    s.tmp_5.arg0 = s.value___116032;
+    s.tmp_5.arg0 = s.value___116505;
     s.tmp_5.arg1 = undefined;
     s.tmp_5.arg2 = undefined;
     s.callLocIdx = 102; s.pc = 7; return s.tmp_5;
   case 7:
     r0 = s.retval;
-    s.tmp_0 = createSnowBall__P115953_mk(s);
+    s.tmp_0 = createSnowBall__P116426_mk(s);
     s.callLocIdx = 103; s.pc = 8; return s.tmp_0;
   case 8:
     r0 = s.retval;
   case 2:
   case 3:
-    r0 = (s.unnamed1223___U2 + 1);
-    s.unnamed1223___U2 = (r0);
+    r0 = (s.unnamed1263___U2 + 1);
+    s.unnamed1263___U2 = (r0);
     { step = 1; continue; }
   case 4:
-    s.unnamed1222___U1 = (undefined);
+    s.unnamed1262___U1 = (undefined);
     r0 = undefined;
     return leave(s, r0)
   default: oops()
 } } }
-inline__P116030.info = {"start":28943,"length":183,"line":307,"column":14,"endLine":314,"endColumn":1,"fileName":"main.ts","functionName":"inline","argumentNames":[]}
+inline__P116503.info = {"start":28943,"length":183,"line":307,"column":14,"endLine":314,"endColumn":1,"fileName":"main.ts","functionName":"inline","argumentNames":[]}
 
-function inline__P116030_mk(s) {
+function inline__P116503_mk(s) {
     checkStack(s.depth);
     return {
-        parent: s, fn: inline__P116030, depth: s.depth + 1,
+        parent: s, fn: inline__P116503, depth: s.depth + 1,
         pc: 0, retval: undefined, r0: undefined, overwrittenPC: false, lambdaArgs: null,
   tmp_0: undefined,
   tmp_1: undefined,
@@ -1611,377 +1604,9 @@ function inline__P116030_mk(s) {
   tmp_3: undefined,
   tmp_4: undefined,
   tmp_5: undefined,
-  value___116032: undefined,
-  unnamed1222___U1: undefined,
-  unnamed1223___U2: undefined,
-} }
-
-
-
-
-
-function inline__P116045(s) {
-let r0 = s.r0, step = s.pc;
-s.pc = -1;
-
-
-while (true) {
-if (yieldSteps-- < 0 && maybeYield(s, step, r0) || runtime !== pxsim.runtime) return null;
-switch (step) {
-  case 0:
-
-    r0 = undefined;
-    return leave(s, r0)
-  default: oops()
-} } }
-inline__P116045.info = {"start":29136,"length":17,"line":315,"column":8,"endLine":317,"endColumn":1,"fileName":"main.ts","functionName":"inline","argumentNames":[]}
-
-function inline__P116045_mk(s) {
-    checkStack(s.depth);
-    return {
-        parent: s, fn: inline__P116045, depth: s.depth + 1,
-        pc: 0, retval: undefined, r0: undefined, overwrittenPC: false, lambdaArgs: null,
-} }
-
-
-
-
-
-function forever__P93358(s) {
-let r0 = s.r0, step = s.pc;
-s.pc = -1;
-
-
-while (true) {
-if (yieldSteps-- < 0 && maybeYield(s, step, r0) || runtime !== pxsim.runtime) return null;
-switch (step) {
-  case 0:
-
-    if (s.lambdaArgs) {
-      s.arg0 = (s.lambdaArgs[0]);
-      s.lambdaArgs = null;
-    }
-    s.tmp_0 = game_forever__P94103_mk(s);
-    s.tmp_0.arg0 = s.arg0;
-    s.callLocIdx = 171; s.pc = 1; return s.tmp_0;
-  case 1:
-    r0 = s.retval;
-    r0 = undefined;
-    return leave(s, r0)
-  default: oops()
-} } }
-forever__P93358.info = {"start":264,"length":62,"line":6,"column":0,"endLine":8,"endColumn":1,"fileName":"pxt_modules/game/gameoverrides.ts","functionName":"forever","argumentNames":["a"]}
-
-function forever__P93358_mk(s) {
-    checkStack(s.depth);
-    return {
-        parent: s, fn: forever__P93358, depth: s.depth + 1,
-        pc: 0, retval: undefined, r0: undefined, overwrittenPC: false, lambdaArgs: null,
-  tmp_0: undefined,
-  arg0: undefined,
-} }
-
-
-
-
-
-function game_forever__P94103(s) {
-let r0 = s.r0, step = s.pc;
-s.pc = -1;
-
-
-while (true) {
-if (yieldSteps-- < 0 && maybeYield(s, step, r0) || runtime !== pxsim.runtime) return null;
-switch (step) {
-  case 0:
-
-    if (s.lambdaArgs) {
-      s.arg0 = (s.lambdaArgs[0]);
-      s.lambdaArgs = null;
-    }
-    r0 = pxsim_numops_toBoolDecr(globals.foreverRunning___95995);
-    s.tmp_1 = r0;
-    r0 = pxsim_Boolean__bang(s.tmp_1);
-    s.tmp_0 = r0;
-    r0 = pxsim_numops_toBoolDecr(s.tmp_0);
-    if (!r0) { step = 1; continue; }
-    globals.foreverRunning___95995 = (true);
-    r0 = pxsim.control.runInParallel(game_forever_inline__P98240);
-  case 1:
-  case 2:
-    r0 = pxsim_pxtcore_mkClassInstance(scene_GameForeverHandler__C93958_VT);
-    s.tmp_0 = r0;
-    s.tmp_1 = scene_GameForeverHandler_constructor__P93960_mk(s);
-    s.tmp_1.arg0 = s.tmp_0;
-    s.tmp_1.arg1 = s.arg0;
-    s.callLocIdx = 1141; s.pc = 3; return s.tmp_1;
-  case 3:
-    r0 = s.retval;
-    s.tmp_3 = game_currentScene__P94092_mk(s);
-    s.callLocIdx = 1140; s.pc = 4; return s.tmp_3;
-  case 4:
-    r0 = s.retval;
-    r0 = r0.fields["gameForeverHandlers"];
-    s.tmp_2 = r0;
-    r0 = pxsim_Array__push(s.tmp_2, s.tmp_0);
-    r0 = undefined;
-    return leave(s, r0)
-  default: oops()
-} } }
-game_forever__P94103.info = {"start":7421,"length":820,"line":243,"column":4,"endLine":266,"endColumn":5,"fileName":"pxt_modules/game/game.ts","functionName":"forever","argumentNames":["action"]}
-
-function game_forever__P94103_mk(s) {
-    checkStack(s.depth);
-    return {
-        parent: s, fn: game_forever__P94103, depth: s.depth + 1,
-        pc: 0, retval: undefined, r0: undefined, overwrittenPC: false, lambdaArgs: null,
-  tmp_0: undefined,
-  tmp_1: undefined,
-  tmp_2: undefined,
-  tmp_3: undefined,
-  arg0: undefined,
-} }
-
-
-
-
-
-function game_forever_inline__P98240(s) {
-let r0 = s.r0, step = s.pc;
-s.pc = -1;
-
-
-while (true) {
-if (yieldSteps-- < 0 && maybeYield(s, step, r0) || runtime !== pxsim.runtime) return null;
-switch (step) {
-  case 0:
-
-    s.handlers___98242 = undefined;
-  case 1:
-    r0 = pxsim_numops_toBoolDecr(1);
-    if (!r0) { step = 2; continue; }
-    s.tmp_0 = game_currentScene__P94092_mk(s);
-    s.callLocIdx = 1136; s.pc = 3; return s.tmp_0;
-  case 3:
-    r0 = s.retval;
-    r0 = r0.fields["gameForeverHandlers"];
-    s.handlers___98242 = (r0);
-    s.tmp_0 = helpers_arrayForEach__P91587_mk(s);
-    s.tmp_0.arg0 = s.handlers___98242;
-    s.tmp_0.arg1 = game_forever_inline__P98248;
-    s.callLocIdx = 1138; s.pc = 4; return s.tmp_0;
-  case 4:
-    r0 = s.retval;
-    s.tmp_0 = pause__P91889_mk(s);
-    s.tmp_0.arg0 = 20;
-    s.callLocIdx = 1139; s.pc = 5; return s.tmp_0;
-  case 5:
-    r0 = s.retval;
-    { step = 1; continue; }
-  case 2:
-    r0 = undefined;
-    return leave(s, r0)
-  default: oops()
-} } }
-game_forever_inline__P98240.info = {"start":7573,"length":535,"line":246,"column":34,"endLine":260,"endColumn":13,"fileName":"pxt_modules/game/game.ts","functionName":"inline","argumentNames":[]}
-
-function game_forever_inline__P98240_mk(s) {
-    checkStack(s.depth);
-    return {
-        parent: s, fn: game_forever_inline__P98240, depth: s.depth + 1,
-        pc: 0, retval: undefined, r0: undefined, overwrittenPC: false, lambdaArgs: null,
-  tmp_0: undefined,
-  handlers___98242: undefined,
-} }
-
-
-
-
-
-function game_forever_inline__P98248(s) {
-let r0 = s.r0, step = s.pc;
-s.pc = -1;
-
-
-while (true) {
-if (yieldSteps-- < 0 && maybeYield(s, step, r0) || runtime !== pxsim.runtime) return null;
-switch (step) {
-  case 0:
-
-    if (s.lambdaArgs) {
-      s.arg0 = (s.lambdaArgs[0]);
-      s.lambdaArgs = null;
-    }
-    r0 = s.arg0.fields["lock"];
-    s.tmp_2 = r0;
-    r0 = pxsim_numops_toBoolDecr(s.tmp_2);
-    s.tmp_1 = r0;
-    r0 = pxsim_Boolean__bang(s.tmp_1);
-    s.tmp_0 = r0;
-    r0 = pxsim_numops_toBoolDecr(s.tmp_0);
-    if (!r0) { step = 1; continue; }
-    r0 = (s.arg0).fields["lock"] = (true);
-    r0 = pxsim_pxtcore_mkAction(1, game_forever_inline__P98257);
-    s.tmp_0 = r0;
-    r0 = pxsim_pxtrt_stclo(s.tmp_0, 0, s.arg0);
-    r0 = pxsim.control.runInParallel(s.tmp_0);
-  case 1:
-  case 2:
-    r0 = undefined;
-    return leave(s, r0)
-  default: oops()
-} } }
-game_forever_inline__P98248.info = {"start":7724,"length":319,"line":249,"column":37,"endLine":257,"endColumn":21,"fileName":"pxt_modules/game/game.ts","functionName":"inline","argumentNames":["h"]}
-
-function game_forever_inline__P98248_mk(s) {
-    checkStack(s.depth);
-    return {
-        parent: s, fn: game_forever_inline__P98248, depth: s.depth + 1,
-        pc: 0, retval: undefined, r0: undefined, overwrittenPC: false, lambdaArgs: null,
-  tmp_0: undefined,
-  tmp_1: undefined,
-  tmp_2: undefined,
-  arg0: undefined,
-} }
-
-
-
-
-
-function game_forever_inline__P98257(s) {
-let r0 = s.r0, step = s.pc;
-s.pc = -1;
-
-
-while (true) {
-if (yieldSteps-- < 0 && maybeYield(s, step, r0) || runtime !== pxsim.runtime) return null;
-switch (step) {
-  case 0:
-
-    s.tmp_0 = if_handler_1_mk(s);
-    s.tmp_0.arg0 = s.caps[0];
-    if (!s.tmp_0.arg0.vtable.iface) {
-      setupLambda(s.tmp_0, pxsim_pxtrt.mapGetByString(s.tmp_0.arg0, "handler"), 1);
-      s.callLocIdx = 1137; s.pc = 1; return s.tmp_0;
-    } else {
-      s.tmp_0.fn = s.tmp_0.arg0.vtable.iface["handler"];
-      if (s.tmp_0.fn == null) { setupLambda(s.tmp_0, s.tmp_0.arg0.fields["handler"], 1); s.callLocIdx = 1137; s.pc = 1; return s.tmp_0; }
-      else if (s.tmp_0.fn.isGetter) { s.tmp_0.stage2Call = true; s.callLocIdx = 1137; s.pc = 1; return s.tmp_0;; }
-     else { s.callLocIdx = 1137; s.pc = 1; return s.tmp_0; }
-    }
-  case 1:
-    r0 = s.retval;
-    r0 = (s.caps[0]).fields["lock"] = (false);
-    r0 = undefined;
-    return leave(s, r0)
-  default: oops()
-} } }
-game_forever_inline__P98257.info = {"start":7863,"length":130,"line":252,"column":50,"endLine":255,"endColumn":29,"fileName":"pxt_modules/game/game.ts","functionName":"inline","argumentNames":[]}
-
-function game_forever_inline__P98257_mk(s) {
-    checkStack(s.depth);
-    return {
-        parent: s, fn: game_forever_inline__P98257, depth: s.depth + 1,
-        pc: 0, retval: undefined, r0: undefined, overwrittenPC: false, lambdaArgs: null,
-  tmp_0: undefined,
-} }
-
-
-
-
-
-function scene_GameForeverHandler_constructor__P93960(s) {
-let r0 = s.r0, step = s.pc;
-s.pc = -1;
-
-
-while (true) {
-if (yieldSteps-- < 0 && maybeYield(s, step, r0) || runtime !== pxsim.runtime) return null;
-switch (step) {
-  case 0:
-
-    if (s.lambdaArgs) {
-      s.arg0 = (s.lambdaArgs[0]);
-      s.arg1 = (s.lambdaArgs[1]);
-      s.lambdaArgs = null;
-    }
-    r0 = s.arg0;
-    if (!checkSubtype(r0, scene_GameForeverHandler__C93958_VT)) failedCast(r0);
-    r0 = (s.arg0).fields["handler"] = (s.arg1);
-    r0 = undefined;
-    return leave(s, r0)
-  default: oops()
-} } }
-scene_GameForeverHandler_constructor__P93960.info = {"start":1340,"length":65,"line":47,"column":8,"endLine":49,"endColumn":13,"fileName":"pxt_modules/game/scene.ts","functionName":"inline","argumentNames":["this","handler"]}
-
-function scene_GameForeverHandler_constructor__P93960_mk(s) {
-    checkStack(s.depth);
-    return {
-        parent: s, fn: scene_GameForeverHandler_constructor__P93960, depth: s.depth + 1,
-        pc: 0, retval: undefined, r0: undefined, overwrittenPC: false, lambdaArgs: null,
-  arg0: undefined,
-  arg1: undefined,
-} }
-
-
-
-
-
-function helpers_arrayForEach__P91587(s) {
-let r0 = s.r0, step = s.pc;
-s.pc = -1;
-
-
-while (true) {
-if (yieldSteps-- < 0 && maybeYield(s, step, r0) || runtime !== pxsim.runtime) return null;
-switch (step) {
-  case 0:
-
-    s.len___98275 = undefined;
-    s.i___98278 = undefined;
-    if (s.lambdaArgs) {
-      s.arg0 = (s.lambdaArgs[0]);
-      s.arg1 = (s.lambdaArgs[1]);
-      s.lambdaArgs = null;
-    }
-    r0 = pxsim_Array__length(s.arg0);
-    s.len___98275 = (r0);
-    s.i___98278 = (0);
-  case 1:
-    r0 = (s.i___98278 < s.len___98275);
-    s.tmp_0 = r0;
-    r0 = pxsim_numops_toBoolDecr(s.tmp_0);
-    if (!r0) { step = 2; continue; }
-    s.tmp_1 = lambda_3_mk(s);
-    s.tmp_1.argL = s.arg1;
-    r0 = pxsim_Array__getAt(s.arg0, s.i___98278);
-    s.tmp_1.arg0 = r0;
-    s.tmp_1.arg1 = s.i___98278;
-    setupLambda(s.tmp_1, s.tmp_1.argL);
-    s.callLocIdx = 6; s.pc = 3; return s.tmp_1;
-  case 3:
-    r0 = s.retval;
-    r0 = (s.i___98278 + 1);
-    s.i___98278 = (r0);
-    { step = 1; continue; }
-  case 2:
-    r0 = undefined;
-    return leave(s, r0)
-  default: oops()
-} } }
-helpers_arrayForEach__P91587.info = {"start":7439,"length":250,"line":254,"column":4,"endLine":259,"endColumn":5,"fileName":"pxt_modules/base/pxt-helpers.ts","functionName":"arrayForEach","argumentNames":["arr","callbackfn"]}
-
-function helpers_arrayForEach__P91587_mk(s) {
-    checkStack(s.depth);
-    return {
-        parent: s, fn: helpers_arrayForEach__P91587, depth: s.depth + 1,
-        pc: 0, retval: undefined, r0: undefined, overwrittenPC: false, lambdaArgs: null,
-  tmp_0: undefined,
-  tmp_1: undefined,
-  len___98275: undefined,
-  i___98278: undefined,
-  arg0: undefined,
-  arg1: undefined,
+  value___116505: undefined,
+  unnamed1262___U1: undefined,
+  unnamed1263___U2: undefined,
 } }
 
 
@@ -3818,7 +3443,7 @@ function control_EventHandler_register_inline__P98718_mk(s) {
 
 
 
-function startGame__P115945(s) {
+function startGame__P116418(s) {
 let r0 = s.r0, step = s.pc;
 s.pc = -1;
 
@@ -3829,7 +3454,7 @@ switch (step) {
   case 0:
 
     s.tmp_0 = scene_setBackgroundImage__P94019_mk(s);
-    r0 = pxsim.image.ofBuffer(_hex115948);
+    r0 = pxsim.image.ofBuffer(_hex116421);
     s.tmp_0.arg0 = r0;
     s.callLocIdx = 69; s.pc = 1; return s.tmp_0;
   case 1:
@@ -3844,15 +3469,15 @@ switch (step) {
     s.callLocIdx = 71; s.pc = 2; return s.tmp_0;
   case 2:
     r0 = s.retval;
-    s.tmp_0 = createSnowBall__P115953_mk(s);
+    s.tmp_0 = createSnowBall__P116426_mk(s);
     s.callLocIdx = 72; s.pc = 4; return s.tmp_0;
   case 4:
     r0 = s.retval;
-    s.tmp_0 = createSnowMan__P115919_mk(s);
+    s.tmp_0 = createSnowMan__P116392_mk(s);
     s.callLocIdx = 73; s.pc = 5; return s.tmp_0;
   case 5:
     r0 = s.retval;
-    s.tmp_0 = createTarget__P115956_mk(s);
+    s.tmp_0 = createTarget__P116429_mk(s);
     s.callLocIdx = 74; s.pc = 6; return s.tmp_0;
   case 6:
     r0 = s.retval;
@@ -3866,23 +3491,23 @@ switch (step) {
     s.callLocIdx = 76; s.pc = 8; return s.tmp_0;
   case 8:
     r0 = s.retval;
-    globals.gameOn___115941 = (true);
+    globals.gameOn___116414 = (true);
     r0 = undefined;
     return leave(s, r0)
   default: oops()
 } } }
-startGame__P115945.info = {"start":1029,"length":20515,"line":30,"column":0,"endLine":160,"endColumn":1,"fileName":"main.ts","functionName":"startGame","argumentNames":[]}
+startGame__P116418.info = {"start":1029,"length":20515,"line":30,"column":0,"endLine":160,"endColumn":1,"fileName":"main.ts","functionName":"startGame","argumentNames":[]}
 
-function startGame__P115945_mk(s) {
+function startGame__P116418_mk(s) {
     checkStack(s.depth);
     return {
-        parent: s, fn: startGame__P115945, depth: s.depth + 1,
+        parent: s, fn: startGame__P116418, depth: s.depth + 1,
         pc: 0, retval: undefined, r0: undefined, overwrittenPC: false, lambdaArgs: null,
   tmp_0: undefined,
   tmp_1: undefined,
 } }
 
-const _hex115948 = pxsim.BufferMethods.createBufferFromHex("8704a0007800000088888888888888888888888888888888888888888868666666761991999999111111111111919999999999999999999999999999999999999999999988888888888888888888888888888888888888888868666666769991999999111111111111119999999999999999999999999999999999999999999988888888888888888888888888888888888888888888666666769911999999111111111111119999999999999999999999999999999999999999999988888888888888888888888888888888888888888888666666969919999999111111111111119999999999999999999999999999999999999999999988888888888888888888888888888888888888888888666666969919999999191111111111119199999999999999999999999999999999999999999988888888888888888888888888888888888888888686666666979919999999191111111111119199999999999999999999999999999999999999999988888888888888888888888888838888888868666666666666999999999999191111111111111199999999999999999999999999999999999999999988888888888888888888888888338388888888866666686676999999999999991111166161111699999999999999999999999999999999999999999988888888888888888888888833338888888888886868686696999999999999991661166661166699999999999999999999999999999999999999999988888888888888888888888888338388888888888888686697999999999999661666666666166696999999999999999999999999999999999999999988888888888888888888888888838888888888888888686697999999999996666666666666666696999999999999999999999999999999999999999988888888888888888888888888888888888888888888886699999996966666666666666666666696999999999999999999999999999999999999999988888888888888888888888888888888888888888888887699696666666666666666666666666696999999999999999999999999999999999999999988888888888888888888888888888888888888888888887699996996666966666666666666666696999999999999999999999999999999999999999988888888888888888888888888888888888888888888889899999999699996966666666666666696999999999999999999999999999999999999999988888888888868888888888888888888888888888888889899999999999999919666666666666691999999999999999999999999999999999999999988888888888888888888888888888888888888888888889899999999999919919969166666666691999999999999999999999999999999999999999988888888888888888888888888888888888888888888889899999999999919919969966966616691999999999999999999999999999999999999999988888888888888888888888888888888d88888888888889899999999999919919919911916116191999999999999999999999999999999999999999988888888888888888888888888888888dd8d88888888889899999999999911919919911111111191999999999999999999999999999999999999999988888888888888888888888888888888d88888888886869699999999999911999919911111111191999999999999999999999999999999999999999988888888888888888888888888888888888888866886669699999999991911999919991111111191999999999999999999999999999999999999999988888888888888888888888888888888888866666666669699999999991991999919191111111191999999999999999999999999999999999999999988888888888888888888888888888888888888866666669699999999991199999999191111111199999999999999999999999999999999999999999988888888888888888888868888888888888888888668689699999999991199999999191111111199999999999999999999999999999999999999999988888888888888888888888888888888888888888888689699999999999199999999111111111199999999999999999999999999999999999999999988888888888888888888888888888888888888888888689699999999199199999999111111119199999999999999999999999999999999999999999988888888888888888888888888888888888888888888689699999999199999999699111111119199999999999999999999999999999999999999999988888888888888888888888888888888888888888888667699999999199996966616111111119999999999999999999999999999999999999999999988888888888888888888888888888888888888688886667699996969699666966619111111119999999999999999999999999999999999999999999988888888888888888888688888888888888888688686666699666666666666666611111111119999999999999999999999999999999999999999999988888868868888888888968688888888888868686666666699919669666666669611111111919999999999999999999999999999999999999999999988888868868888888888688888888888886668666666666697919969196666661911111111919999999999999999999999999999999999999999999988888888888888888888888888888866666666666666666697919999996969661111111111999999999999999999999999999999999999999999999988888888888888888888888888888888888668866666666696119999999969991111111111999999999999999999999999999999999999999999999988888888888888888888888888888888888888886668666696199199999999191111111111999999999999999999999999999999999999999999999988888888888888888888888888888888888888888868666676199199999999191111111111999999999999999999999999999999999999999999999988888888888888888888888888888868888888888868666666991199999999191111111111999999999999999999999999999999999999999999999988888888888888888888888888888888888888888868666666971199999999111111111111919999999999999999999999999999999999999999999988888888888868888888888888888888888888888868666666771991999999111111111111919999999999999999999999999999999999999999999988888888888888888888888888888888888888888868666666761991999999111111111111919999999999999999999999999999999999999999999988888888888888888888888888888888888888888868666666769991999999111111111111119999999999999999999999999999999999999999999988888888888888888888888888888888888888888888666666769911999999111111111111119999999999999999999999999999999999999999999988888888888888888888888888888888888888888888666666969919999999111111111111119999999999999999999999999999999999999999999988888888888888888888888888888888888888888888666666969919999999191111111111119199999999999999999999999999999999999999999988888888888888888888888888888888888888888686666666979919999999191111111111119199999999999999999999999999999999999999999988888888888888888888888888838888888868666666666666999999999999191111111111111199999999999999999999999999999999999999999988888888888888888888888888338388888888866666686676999999999999991111166161111699999999999999999999999999999999999999999988888888888888888888888833338888888888886868686696999999999999991661166661166699999999999999999999999999999999999999999988888888888888888888888888338388888888888888686697999999999999661666666666166696999999999999999999999999999999999999999988888888888888888888888888838888888888888888686697999999999996666666666666666696999999999999999999999999999999999999999988888888888888888888888888888888888888888888886699999996966666666666666666666696999999999999999999999999999999999999999988888888888888888888888888888888888888888888887699696666666666666666666666666696999999999999999999999999999999999999999988888888888888888888888888888888888888888888887699996996666966666666666666666696999999999999999999999999999999999999999988888888888888888888888888888888888888888888889899999999699996966666666666666696999999999999999999999999999999999999999988888888888868888888888888888888888888888888889899999999999999919666666666666691999999999999999999999999999999999999999988888888888888888888888888888888888888888888889899999999999919919969166666666691999999999999999999999999999999999999999988888888888888888888888888888888888888888888889899999999999919919969966966616691999999999999999999999999999999999999999988888888888888888888888888888888d88888888888889899999999999919919919911916116191999999999999999999999999999999999999999988888888888888888888888888888888dd8d88888888889899999999999911919919911111111191999999999999999999999999999999999999999988888888888888888888888888888888d88888888886869699999999999911999919911111111191999999999999999999999999999999999999999988888888888888888888888888888888888888866886669699999999991911999919991111111191999999999999999999999999999999999999999988888888888888888888888888888888888866666666669699999999991991999919191111111191999999999999999999999999999999999999999988888888888888888888888888888888888888866666669699999999991199999999191111111199999999999999999999999999999999999999999988888888888888888888868888888888888888888668689699999999991199999999191111111199999999999999999999999999999999999999999988888888888888888888888888888888888888888888689699999999999199999999111111111199999999999999999999999999999999999999999988888888888888888888888888888888888888888888689699999999199199999999111111119199999999999999999999999999999999999999999988888888888888888888888888888888888888888888689699999999199999999699111111119199999999999999999999999999999999999999999988888888888888888888888888888888888888888888667699999999199996966616111111119999999999999999999999999999999999999999999988888888888888888888888888888888888888688886667699996969699666966619111111119999999999999999999999999999999999999999999988888888888888888888688888888888888888688686666699666666666666666611111111119999999999999999999999999999999999999999999988888868868888888888968688888888888868686666666699919669666666669611111111919999999999999999999999999999999999999999999988888868868888888888688888888888886668666666666697919969196666661911111111919999999999999999999999999999999999999999999988888888888888888888888888888866666666666666666697919999996969661111111111999999999999999999999999999999999999999999999988888888888888888888888888888888888668866666666696119999999969991111111111999999999999999999999999999999999999999999999988888888888888888888888888888888888888886668666696199199999999191111111111999999999999999999999999999999999999999999999988888888888888888888888888888888888888888868666676199199999999191111111111999999999999999999999999999999999999999999999988888888888888888888888888888868888888888868666666991199999999191111111111999999999999999999999999999999999999999999999988888888888888888888888888888888888888888868666666971199999999111111111111919999999999999999999999999999999999999999999988888888888868888888888888888888888888888868666666771991999999111111111111919999999999999999999999999999999999999999999988888888888888888888888888888888888888888868666666761991999999111111111111919999999999999999999999999999999999999999999988888888888888888888888888888888888888888868666666769991999999111111111111119999999999999999999999999999999999999999999988888888888888888888888888888888888888888888666666769911999999111111111111119999999999999999999999999999999999999999999988888888888888888888888888888888888888888888666666969919999999111111111111119999999999999999999999999999999999999999999988888888888888888888888888888888888888888888666666969919999999191111111111119199999999999999999999999999999999999999999988888888888888888888888888888888888888888686666666979919999999191111111111119199999999999999999999999999999999999999999988888888888888888888888888838888888868666666666666999999999999191111111111111199999999999999999999999999999999999999999988888888888888888888888888338388888888866666686676999999999999991111166161111699999999999999999999999999999999999999999988888888888888888888888833338888888888886868686696999999999999991661166661166699999999999999999999999999999999999999999988888888888888888888888888338388888888888888686697999999999999661666666666166696999999999999999999999999999999999999999988888888888888888888888888838888888888888888686697999999999996666666666666666696999999999999999999999999999999999999999988888888888888888888888888888888888888888888886699999996966666666666666666666696999999999999999999999999999999999999999988888888888888888888888888888888888888888888887699696666666666666666666666666696999999999999999999999999999999999999999988888888888888888888888888888888888888888888887699996996666966666666666666666696999999999999999999999999999999999999999988888888888888888888888888888888888888888888889899999999699996966666666666666696999999999999999999999999999999999999999988888888888868888888888888888888888888888888889899999999999999919666666666666691999999999999999999999999999999999999999988888888888888888888888888888888888888888888889899999999999919919969166666666691999999999999999999999999999999999999999988888888888888888888888888888888888888888888889899999999999919919969966966616691999999999999999999999999999999999999999988888888888888888888888888888888d88888888888889899999999999919919919911916116191999999999999999999999999999999999999999988888888888888888888888888888888dd8d88888888889899999999999911919919911111111191999999999999999999999999999999999999999988888888888888888888888888888888d88888888886869699999999999911999919911111111191999999999999999999999999999999999999999988888888888888888888888888888888888888866886669699999999991911999919991111111191999999999999999999999999999999999999999988888888888888888888888888888888888866666666669699999999991991999919191111111191999999999999999999999999999999999999999988888888888888888888888888888888888888866666669699999999991199999999191111111199999999999999999999999999999999999999999988888888888888888888868888888888888888888668689699999999991199999999191111111199999999999999999999999999999999999999999988888888888888888888888888888888888888888888689699999999999199999999111111111199999999999999999999999999999999999999999988888888888888888888888888888888888888888888689699999999199199999999111111119199999999999999999999999999999999999999999988888888888888888888888888888888888888888888689699999999199999999699111111119199999999999999999999999999999999999999999988888888888888888888888888888888888888888888667699999999199996966616111111119999999999999999999999999999999999999999999988888888888888888888888888888888888888688886667699996969699666966619111111119999999999999999999999999999999999999999999988888888888888888888688888888888888888688686666699666666666666666611111111119999999999999999999999999999999999999999999988888868868888888888968688888888888868686666666699919669666666669611111111919999999999999999999999999999999999999999999988888868868888888888688888888888886668666666666697919969196666661911111111919999999999999999999999999999999999999999999988888888888888888888888888888866666666666666666697919999996969661111111111999999999999999999999999999999999999999999999988888888888888888888888888888888888668866666666696119999999969991111111111999999999999999999999999999999999999999999999988888888888888888888888888888888888888886668666696199199999999191111111111999999999999999999999999999999999999999999999988888888888888888888888888888888888888888868666676199199999999191111111111999999999999999999999999999999999999999999999988888888888888888888888888888868888888888868666666991199999999191111111111999999999999999999999999999999999999999999999988888888888888888888888888888888888888888868666666971199999999111111111111919999999999999999999999999999999999999999999988888888888868888888888888888888888888888868666666771991999999111111111111919999999999999999999999999999999999999999999988888888888888888888888888888888888888888868666666761991999999111111111111919999999999999999999999999999999999999999999988888888888888888888888888888888888888888868666666769991999999111111111111119999999999999999999999999999999999999999999988888888888888888888888888888888888888888888666666769911999999111111111111119999999999999999999999999999999999999999999988888888888888888888888888888888888888888888666666969919999999111111111111119999999999999999999999999999999999999999999988888888888888888888888888888888888888888888666666969919999999191111111111119199999999999999999999999999999999999999999988888888888888888888888888888888888888888686666666979919999999191111111111119199999999999999999999999999999999999999999988888888888888888888888888838888888868666666666666999999999999191111111111111199999999999999999999999999999999999999999988888888888888888888888888338388888888866666686676999999999999991111166161111699999999999999999999999999999999999999999988888888888888888888888833338888888888886868686696999999999999991661166661166699999999999999999999999999999999999999999988888888888888888888888888338388888888888888686697999999999999661666666666166696999999999999999999999999999999999999999988888888888888888888888888838888888888888888686697999999999996666666666666666696999999999999999999999999999999999999999988888888888888888888888888888888888888888888886699999996966666666666666666666696999999999999999999999999999999999999999988888888888888888888888888888888888888888888887699696666666666666666666666666696999999999999999999999999999999999999999988888888888888888888888888888888888888888888887699996996666966666666666666666696999999999999999999999999999999999999999988888888888888888888888888888888888888888888889899999999699996966666666666666696999999999999999999999999999999999999999988888888888868888888888888888888888888888888889899999999999999919666666666666691999999999999999999999999999999999999999988888888888888888888888888888888888888888888889899999999999919919969166666666691999999999999999999999999999999999999999988888888888888888888888888888888888888888888889899999999999919919969966966616691999999999999999999999999999999999999999988888888888888888888888888888888d88888888888889899999999999919919919911916116191999999999999999999999999999999999999999988888888888888888888888888888888dd8d88888888889899999999999911919919911111111191999999999999999999999999999999999999999988888888888888888888888888888888d888888888868696999999999999119999199111111111919999999999999999999999999999999999999999888888888888888888888888888888888888888668866696999999999919119999199911111111919999999999999999999999999999999999999999888888888888888888888888888888888888666666666696999999999919919999191911111111919999999999999999999999999999999999999999888888888888888888888888888888888888888666666696999999999911999999991911111111999999999999999999999999999999999999999999888888888888888888888688888888888888888886686896999999999911999999991911111111999999999999999999999999999999999999999999888888888888888888888888888888888888888888886896999999999991999999991111111111999999999999999999999999999999999999999999888888888888888888888888888888888888888888886896999999991991999999991111111191999999999999999999999999999999999999999999888888888888888888888888888888888888888888886896999999991999999996991111111191999999999999999999999999999999999999999999888888888888888888888888888888888888888888886676999999991999969666161111111199999999999999999999999999999999999999999999888888888888888888888888888888888888886888866676999969696996669666191111111199999999999999999999999999999999999999999999888888888888888888886888888888888888886886866666996666666666666666111111111199999999999999999999999999999999999999999999888888688688888888889686888888888888686866666666999196696666666696111111119199999999999999999999999999999999999999999999888888688688888888886888888888888866686666666666979199691966666619111111119199999999999999999999999999999999999999999999888888888888888888888888888888666666666666666666979199999969696611111111119999999999999999999999999999999999999999999999888888888888888888888888888888888886688666666666961199999999699911111111119999999999999999999999999999999999999999999999888888888888888888888888888888888888888866686666961991999999991911111111119999999999999999999999999999999999999999999999888888888888888888888888888888888888888888686666761991999999991911111111119999999999999999999999999999999999999999999999888888888888888888888888888888688888888888686666669911999999991911111111119999999999999999999999999999999999999999999999888888888888888888888888888888888888888888686666669711999999991111111111119199999999999999999999999999999999999999999999888888888888688888888888888888888888888888686666667719919999991111111111119199999999999999999999999999999999999999999999")
+const _hex116421 = pxsim.BufferMethods.createBufferFromHex("8704a0007800000088888888888888888888888888888888888888888868666666761991999999111111111111919999999999999999999999999999999999999999999988888888888888888888888888888888888888888868666666769991999999111111111111119999999999999999999999999999999999999999999988888888888888888888888888888888888888888888666666769911999999111111111111119999999999999999999999999999999999999999999988888888888888888888888888888888888888888888666666969919999999111111111111119999999999999999999999999999999999999999999988888888888888888888888888888888888888888888666666969919999999191111111111119199999999999999999999999999999999999999999988888888888888888888888888888888888888888686666666979919999999191111111111119199999999999999999999999999999999999999999988888888888888888888888888838888888868666666666666999999999999191111111111111199999999999999999999999999999999999999999988888888888888888888888888338388888888866666686676999999999999991111166161111699999999999999999999999999999999999999999988888888888888888888888833338888888888886868686696999999999999991661166661166699999999999999999999999999999999999999999988888888888888888888888888338388888888888888686697999999999999661666666666166696999999999999999999999999999999999999999988888888888888888888888888838888888888888888686697999999999996666666666666666696999999999999999999999999999999999999999988888888888888888888888888888888888888888888886699999996966666666666666666666696999999999999999999999999999999999999999988888888888888888888888888888888888888888888887699696666666666666666666666666696999999999999999999999999999999999999999988888888888888888888888888888888888888888888887699996996666966666666666666666696999999999999999999999999999999999999999988888888888888888888888888888888888888888888889899999999699996966666666666666696999999999999999999999999999999999999999988888888888868888888888888888888888888888888889899999999999999919666666666666691999999999999999999999999999999999999999988888888888888888888888888888888888888888888889899999999999919919969166666666691999999999999999999999999999999999999999988888888888888888888888888888888888888888888889899999999999919919969966966616691999999999999999999999999999999999999999988888888888888888888888888888888d88888888888889899999999999919919919911916116191999999999999999999999999999999999999999988888888888888888888888888888888dd8d88888888889899999999999911919919911111111191999999999999999999999999999999999999999988888888888888888888888888888888d88888888886869699999999999911999919911111111191999999999999999999999999999999999999999988888888888888888888888888888888888888866886669699999999991911999919991111111191999999999999999999999999999999999999999988888888888888888888888888888888888866666666669699999999991991999919191111111191999999999999999999999999999999999999999988888888888888888888888888888888888888866666669699999999991199999999191111111199999999999999999999999999999999999999999988888888888888888888868888888888888888888668689699999999991199999999191111111199999999999999999999999999999999999999999988888888888888888888888888888888888888888888689699999999999199999999111111111199999999999999999999999999999999999999999988888888888888888888888888888888888888888888689699999999199199999999111111119199999999999999999999999999999999999999999988888888888888888888888888888888888888888888689699999999199999999699111111119199999999999999999999999999999999999999999988888888888888888888888888888888888888888888667699999999199996966616111111119999999999999999999999999999999999999999999988888888888888888888888888888888888888688886667699996969699666966619111111119999999999999999999999999999999999999999999988888888888888888888688888888888888888688686666699666666666666666611111111119999999999999999999999999999999999999999999988888868868888888888968688888888888868686666666699919669666666669611111111919999999999999999999999999999999999999999999988888868868888888888688888888888886668666666666697919969196666661911111111919999999999999999999999999999999999999999999988888888888888888888888888888866666666666666666697919999996969661111111111999999999999999999999999999999999999999999999988888888888888888888888888888888888668866666666696119999999969991111111111999999999999999999999999999999999999999999999988888888888888888888888888888888888888886668666696199199999999191111111111999999999999999999999999999999999999999999999988888888888888888888888888888888888888888868666676199199999999191111111111999999999999999999999999999999999999999999999988888888888888888888888888888868888888888868666666991199999999191111111111999999999999999999999999999999999999999999999988888888888888888888888888888888888888888868666666971199999999111111111111919999999999999999999999999999999999999999999988888888888868888888888888888888888888888868666666771991999999111111111111919999999999999999999999999999999999999999999988888888888888888888888888888888888888888868666666761991999999111111111111919999999999999999999999999999999999999999999988888888888888888888888888888888888888888868666666769991999999111111111111119999999999999999999999999999999999999999999988888888888888888888888888888888888888888888666666769911999999111111111111119999999999999999999999999999999999999999999988888888888888888888888888888888888888888888666666969919999999111111111111119999999999999999999999999999999999999999999988888888888888888888888888888888888888888888666666969919999999191111111111119199999999999999999999999999999999999999999988888888888888888888888888888888888888888686666666979919999999191111111111119199999999999999999999999999999999999999999988888888888888888888888888838888888868666666666666999999999999191111111111111199999999999999999999999999999999999999999988888888888888888888888888338388888888866666686676999999999999991111166161111699999999999999999999999999999999999999999988888888888888888888888833338888888888886868686696999999999999991661166661166699999999999999999999999999999999999999999988888888888888888888888888338388888888888888686697999999999999661666666666166696999999999999999999999999999999999999999988888888888888888888888888838888888888888888686697999999999996666666666666666696999999999999999999999999999999999999999988888888888888888888888888888888888888888888886699999996966666666666666666666696999999999999999999999999999999999999999988888888888888888888888888888888888888888888887699696666666666666666666666666696999999999999999999999999999999999999999988888888888888888888888888888888888888888888887699996996666966666666666666666696999999999999999999999999999999999999999988888888888888888888888888888888888888888888889899999999699996966666666666666696999999999999999999999999999999999999999988888888888868888888888888888888888888888888889899999999999999919666666666666691999999999999999999999999999999999999999988888888888888888888888888888888888888888888889899999999999919919969166666666691999999999999999999999999999999999999999988888888888888888888888888888888888888888888889899999999999919919969966966616691999999999999999999999999999999999999999988888888888888888888888888888888d88888888888889899999999999919919919911916116191999999999999999999999999999999999999999988888888888888888888888888888888dd8d88888888889899999999999911919919911111111191999999999999999999999999999999999999999988888888888888888888888888888888d88888888886869699999999999911999919911111111191999999999999999999999999999999999999999988888888888888888888888888888888888888866886669699999999991911999919991111111191999999999999999999999999999999999999999988888888888888888888888888888888888866666666669699999999991991999919191111111191999999999999999999999999999999999999999988888888888888888888888888888888888888866666669699999999991199999999191111111199999999999999999999999999999999999999999988888888888888888888868888888888888888888668689699999999991199999999191111111199999999999999999999999999999999999999999988888888888888888888888888888888888888888888689699999999999199999999111111111199999999999999999999999999999999999999999988888888888888888888888888888888888888888888689699999999199199999999111111119199999999999999999999999999999999999999999988888888888888888888888888888888888888888888689699999999199999999699111111119199999999999999999999999999999999999999999988888888888888888888888888888888888888888888667699999999199996966616111111119999999999999999999999999999999999999999999988888888888888888888888888888888888888688886667699996969699666966619111111119999999999999999999999999999999999999999999988888888888888888888688888888888888888688686666699666666666666666611111111119999999999999999999999999999999999999999999988888868868888888888968688888888888868686666666699919669666666669611111111919999999999999999999999999999999999999999999988888868868888888888688888888888886668666666666697919969196666661911111111919999999999999999999999999999999999999999999988888888888888888888888888888866666666666666666697919999996969661111111111999999999999999999999999999999999999999999999988888888888888888888888888888888888668866666666696119999999969991111111111999999999999999999999999999999999999999999999988888888888888888888888888888888888888886668666696199199999999191111111111999999999999999999999999999999999999999999999988888888888888888888888888888888888888888868666676199199999999191111111111999999999999999999999999999999999999999999999988888888888888888888888888888868888888888868666666991199999999191111111111999999999999999999999999999999999999999999999988888888888888888888888888888888888888888868666666971199999999111111111111919999999999999999999999999999999999999999999988888888888868888888888888888888888888888868666666771991999999111111111111919999999999999999999999999999999999999999999988888888888888888888888888888888888888888868666666761991999999111111111111919999999999999999999999999999999999999999999988888888888888888888888888888888888888888868666666769991999999111111111111119999999999999999999999999999999999999999999988888888888888888888888888888888888888888888666666769911999999111111111111119999999999999999999999999999999999999999999988888888888888888888888888888888888888888888666666969919999999111111111111119999999999999999999999999999999999999999999988888888888888888888888888888888888888888888666666969919999999191111111111119199999999999999999999999999999999999999999988888888888888888888888888888888888888888686666666979919999999191111111111119199999999999999999999999999999999999999999988888888888888888888888888838888888868666666666666999999999999191111111111111199999999999999999999999999999999999999999988888888888888888888888888338388888888866666686676999999999999991111166161111699999999999999999999999999999999999999999988888888888888888888888833338888888888886868686696999999999999991661166661166699999999999999999999999999999999999999999988888888888888888888888888338388888888888888686697999999999999661666666666166696999999999999999999999999999999999999999988888888888888888888888888838888888888888888686697999999999996666666666666666696999999999999999999999999999999999999999988888888888888888888888888888888888888888888886699999996966666666666666666666696999999999999999999999999999999999999999988888888888888888888888888888888888888888888887699696666666666666666666666666696999999999999999999999999999999999999999988888888888888888888888888888888888888888888887699996996666966666666666666666696999999999999999999999999999999999999999988888888888888888888888888888888888888888888889899999999699996966666666666666696999999999999999999999999999999999999999988888888888868888888888888888888888888888888889899999999999999919666666666666691999999999999999999999999999999999999999988888888888888888888888888888888888888888888889899999999999919919969166666666691999999999999999999999999999999999999999988888888888888888888888888888888888888888888889899999999999919919969966966616691999999999999999999999999999999999999999988888888888888888888888888888888d88888888888889899999999999919919919911916116191999999999999999999999999999999999999999988888888888888888888888888888888dd8d88888888889899999999999911919919911111111191999999999999999999999999999999999999999988888888888888888888888888888888d88888888886869699999999999911999919911111111191999999999999999999999999999999999999999988888888888888888888888888888888888888866886669699999999991911999919991111111191999999999999999999999999999999999999999988888888888888888888888888888888888866666666669699999999991991999919191111111191999999999999999999999999999999999999999988888888888888888888888888888888888888866666669699999999991199999999191111111199999999999999999999999999999999999999999988888888888888888888868888888888888888888668689699999999991199999999191111111199999999999999999999999999999999999999999988888888888888888888888888888888888888888888689699999999999199999999111111111199999999999999999999999999999999999999999988888888888888888888888888888888888888888888689699999999199199999999111111119199999999999999999999999999999999999999999988888888888888888888888888888888888888888888689699999999199999999699111111119199999999999999999999999999999999999999999988888888888888888888888888888888888888888888667699999999199996966616111111119999999999999999999999999999999999999999999988888888888888888888888888888888888888688886667699996969699666966619111111119999999999999999999999999999999999999999999988888888888888888888688888888888888888688686666699666666666666666611111111119999999999999999999999999999999999999999999988888868868888888888968688888888888868686666666699919669666666669611111111919999999999999999999999999999999999999999999988888868868888888888688888888888886668666666666697919969196666661911111111919999999999999999999999999999999999999999999988888888888888888888888888888866666666666666666697919999996969661111111111999999999999999999999999999999999999999999999988888888888888888888888888888888888668866666666696119999999969991111111111999999999999999999999999999999999999999999999988888888888888888888888888888888888888886668666696199199999999191111111111999999999999999999999999999999999999999999999988888888888888888888888888888888888888888868666676199199999999191111111111999999999999999999999999999999999999999999999988888888888888888888888888888868888888888868666666991199999999191111111111999999999999999999999999999999999999999999999988888888888888888888888888888888888888888868666666971199999999111111111111919999999999999999999999999999999999999999999988888888888868888888888888888888888888888868666666771991999999111111111111919999999999999999999999999999999999999999999988888888888888888888888888888888888888888868666666761991999999111111111111919999999999999999999999999999999999999999999988888888888888888888888888888888888888888868666666769991999999111111111111119999999999999999999999999999999999999999999988888888888888888888888888888888888888888888666666769911999999111111111111119999999999999999999999999999999999999999999988888888888888888888888888888888888888888888666666969919999999111111111111119999999999999999999999999999999999999999999988888888888888888888888888888888888888888888666666969919999999191111111111119199999999999999999999999999999999999999999988888888888888888888888888888888888888888686666666979919999999191111111111119199999999999999999999999999999999999999999988888888888888888888888888838888888868666666666666999999999999191111111111111199999999999999999999999999999999999999999988888888888888888888888888338388888888866666686676999999999999991111166161111699999999999999999999999999999999999999999988888888888888888888888833338888888888886868686696999999999999991661166661166699999999999999999999999999999999999999999988888888888888888888888888338388888888888888686697999999999999661666666666166696999999999999999999999999999999999999999988888888888888888888888888838888888888888888686697999999999996666666666666666696999999999999999999999999999999999999999988888888888888888888888888888888888888888888886699999996966666666666666666666696999999999999999999999999999999999999999988888888888888888888888888888888888888888888887699696666666666666666666666666696999999999999999999999999999999999999999988888888888888888888888888888888888888888888887699996996666966666666666666666696999999999999999999999999999999999999999988888888888888888888888888888888888888888888889899999999699996966666666666666696999999999999999999999999999999999999999988888888888868888888888888888888888888888888889899999999999999919666666666666691999999999999999999999999999999999999999988888888888888888888888888888888888888888888889899999999999919919969166666666691999999999999999999999999999999999999999988888888888888888888888888888888888888888888889899999999999919919969966966616691999999999999999999999999999999999999999988888888888888888888888888888888d88888888888889899999999999919919919911916116191999999999999999999999999999999999999999988888888888888888888888888888888dd8d88888888889899999999999911919919911111111191999999999999999999999999999999999999999988888888888888888888888888888888d888888888868696999999999999119999199111111111919999999999999999999999999999999999999999888888888888888888888888888888888888888668866696999999999919119999199911111111919999999999999999999999999999999999999999888888888888888888888888888888888888666666666696999999999919919999191911111111919999999999999999999999999999999999999999888888888888888888888888888888888888888666666696999999999911999999991911111111999999999999999999999999999999999999999999888888888888888888888688888888888888888886686896999999999911999999991911111111999999999999999999999999999999999999999999888888888888888888888888888888888888888888886896999999999991999999991111111111999999999999999999999999999999999999999999888888888888888888888888888888888888888888886896999999991991999999991111111191999999999999999999999999999999999999999999888888888888888888888888888888888888888888886896999999991999999996991111111191999999999999999999999999999999999999999999888888888888888888888888888888888888888888886676999999991999969666161111111199999999999999999999999999999999999999999999888888888888888888888888888888888888886888866676999969696996669666191111111199999999999999999999999999999999999999999999888888888888888888886888888888888888886886866666996666666666666666111111111199999999999999999999999999999999999999999999888888688688888888889686888888888888686866666666999196696666666696111111119199999999999999999999999999999999999999999999888888688688888888886888888888888866686666666666979199691966666619111111119199999999999999999999999999999999999999999999888888888888888888888888888888666666666666666666979199999969696611111111119999999999999999999999999999999999999999999999888888888888888888888888888888888886688666666666961199999999699911111111119999999999999999999999999999999999999999999999888888888888888888888888888888888888888866686666961991999999991911111111119999999999999999999999999999999999999999999999888888888888888888888888888888888888888888686666761991999999991911111111119999999999999999999999999999999999999999999999888888888888888888888888888888688888888888686666669911999999991911111111119999999999999999999999999999999999999999999999888888888888888888888888888888888888888888686666669711999999991111111111119199999999999999999999999999999999999999999999888888888888688888888888888888888888888888686666667719919999991111111111119199999999999999999999999999999999999999999999")
 
 
 
@@ -7960,6 +7585,67 @@ function info_PlayerInfo_hasScore__P93810_mk(s) {
 
 
 
+function helpers_arrayForEach__P91587(s) {
+let r0 = s.r0, step = s.pc;
+s.pc = -1;
+
+
+while (true) {
+if (yieldSteps-- < 0 && maybeYield(s, step, r0) || runtime !== pxsim.runtime) return null;
+switch (step) {
+  case 0:
+
+    s.len___98275 = undefined;
+    s.i___98278 = undefined;
+    if (s.lambdaArgs) {
+      s.arg0 = (s.lambdaArgs[0]);
+      s.arg1 = (s.lambdaArgs[1]);
+      s.lambdaArgs = null;
+    }
+    r0 = pxsim_Array__length(s.arg0);
+    s.len___98275 = (r0);
+    s.i___98278 = (0);
+  case 1:
+    r0 = (s.i___98278 < s.len___98275);
+    s.tmp_0 = r0;
+    r0 = pxsim_numops_toBoolDecr(s.tmp_0);
+    if (!r0) { step = 2; continue; }
+    s.tmp_1 = lambda_3_mk(s);
+    s.tmp_1.argL = s.arg1;
+    r0 = pxsim_Array__getAt(s.arg0, s.i___98278);
+    s.tmp_1.arg0 = r0;
+    s.tmp_1.arg1 = s.i___98278;
+    setupLambda(s.tmp_1, s.tmp_1.argL);
+    s.callLocIdx = 6; s.pc = 3; return s.tmp_1;
+  case 3:
+    r0 = s.retval;
+    r0 = (s.i___98278 + 1);
+    s.i___98278 = (r0);
+    { step = 1; continue; }
+  case 2:
+    r0 = undefined;
+    return leave(s, r0)
+  default: oops()
+} } }
+helpers_arrayForEach__P91587.info = {"start":7439,"length":250,"line":254,"column":4,"endLine":259,"endColumn":5,"fileName":"pxt_modules/base/pxt-helpers.ts","functionName":"arrayForEach","argumentNames":["arr","callbackfn"]}
+
+function helpers_arrayForEach__P91587_mk(s) {
+    checkStack(s.depth);
+    return {
+        parent: s, fn: helpers_arrayForEach__P91587, depth: s.depth + 1,
+        pc: 0, retval: undefined, r0: undefined, overwrittenPC: false, lambdaArgs: null,
+  tmp_0: undefined,
+  tmp_1: undefined,
+  len___98275: undefined,
+  i___98278: undefined,
+  arg0: undefined,
+  arg1: undefined,
+} }
+
+
+
+
+
 function scene_Scene_millis__P94003(s) {
 let r0 = s.r0, step = s.pc;
 s.pc = -1;
@@ -8109,7 +7795,7 @@ function info_PlayerInfo_setScore__P93808_mk(s) {
 
 
 
-function createTarget__P115956(s) {
+function createTarget__P116429(s) {
 let r0 = s.r0, step = s.pc;
 s.pc = -1;
 
@@ -8120,15 +7806,15 @@ switch (step) {
   case 0:
 
     s.tmp_0 = sprites_create__P93526_mk(s);
-    r0 = pxsim.image.ofBuffer(_hex115996);
+    r0 = pxsim.image.ofBuffer(_hex116469);
     s.tmp_0.arg0 = r0;
-    s.tmp_0.arg1 = globals.Target___115917;
+    s.tmp_0.arg1 = globals.Target___116390;
     s.callLocIdx = 88; s.pc = 1; return s.tmp_0;
   case 1:
     r0 = s.retval;
-    globals.target___115974 = (r0);
+    globals.target___116447 = (r0);
     s.tmp_0 = Sprite_setPosition__P93631_mk(s);
-    s.tmp_0.arg0 = globals.target___115974;
+    s.tmp_0.arg0 = globals.target___116447;
     r0 = pxsim.Math_.randomRange(20, 150);
     s.tmp_0.arg1 = r0;
     r0 = pxsim.Math_.randomRange(10, 100);
@@ -8140,17 +7826,17 @@ switch (step) {
     return leave(s, r0)
   default: oops()
 } } }
-createTarget__P115956.info = {"start":22007,"length":806,"line":176,"column":0,"endLine":196,"endColumn":1,"fileName":"main.ts","functionName":"createTarget","argumentNames":[]}
+createTarget__P116429.info = {"start":22007,"length":806,"line":176,"column":0,"endLine":196,"endColumn":1,"fileName":"main.ts","functionName":"createTarget","argumentNames":[]}
 
-function createTarget__P115956_mk(s) {
+function createTarget__P116429_mk(s) {
     checkStack(s.depth);
     return {
-        parent: s, fn: createTarget__P115956, depth: s.depth + 1,
+        parent: s, fn: createTarget__P116429, depth: s.depth + 1,
         pc: 0, retval: undefined, r0: undefined, overwrittenPC: false, lambdaArgs: null,
   tmp_0: undefined,
 } }
 
-const _hex115996 = pxsim.BufferMethods.createBufferFromHex("87041000100000000000000000000000000022222202000000222222222202002022111111212200201221222211220022112222221221022221121111222102222112221222210222211212122221022221122212222102222112111122210222112222221221022012212222112200202211111121220000222222222202000000222222020000")
+const _hex116469 = pxsim.BufferMethods.createBufferFromHex("87041000100000000000000000000000000022222202000000222222222202002022111111212200201221222211220022112222221221022221121111222102222112221222210222211212122221022221122212222102222112111122210222112222221221022012212222112200202211111121220000222222222202000000222222020000")
 
 
 
@@ -10089,7 +9775,7 @@ function Sprite_vx__P93588_mk(s) {
 
 
 
-function createSnowMan__P115919(s) {
+function createSnowMan__P116392(s) {
 let r0 = s.r0, step = s.pc;
 s.pc = -1;
 
@@ -10100,15 +9786,15 @@ switch (step) {
   case 0:
 
     s.tmp_0 = sprites_create__P93526_mk(s);
-    r0 = pxsim.image.ofBuffer(_hex115925);
+    r0 = pxsim.image.ofBuffer(_hex116398);
     s.tmp_0.arg0 = r0;
     s.tmp_0.arg1 = globals.Player___93690;
     s.callLocIdx = 63; s.pc = 1; return s.tmp_0;
   case 1:
     r0 = s.retval;
-    globals.snowMan___115921 = (r0);
+    globals.snowMan___116394 = (r0);
     s.tmp_0 = tiles_placeOnTile__P93915_mk(s);
-    s.tmp_0.arg0 = globals.snowMan___115921;
+    s.tmp_0.arg0 = globals.snowMan___116394;
     s.tmp_1 = tiles_getTileLocation__P93911_mk(s);
     s.tmp_1.arg0 = 0;
     s.tmp_1.arg1 = 6;
@@ -10120,7 +9806,7 @@ switch (step) {
   case 2:
     r0 = s.retval;
     s.tmp_0 = if_z_2_mk(s);
-    s.tmp_0.arg0 = globals.snowMan___115921;
+    s.tmp_0.arg0 = globals.snowMan___116394;
     s.tmp_0.arg1 = 10;
     if (!s.tmp_0.arg0.vtable.iface) {
       s.retval = pxsim_pxtrt.mapSetByString(s.tmp_0.arg0, "z", s.tmp_0.arg1);
@@ -10136,18 +9822,18 @@ switch (step) {
     return leave(s, r0)
   default: oops()
 } } }
-createSnowMan__P115919.info = {"start":71,"length":828,"line":3,"column":0,"endLine":24,"endColumn":1,"fileName":"main.ts","functionName":"createSnowMan","argumentNames":[]}
+createSnowMan__P116392.info = {"start":71,"length":828,"line":3,"column":0,"endLine":24,"endColumn":1,"fileName":"main.ts","functionName":"createSnowMan","argumentNames":[]}
 
-function createSnowMan__P115919_mk(s) {
+function createSnowMan__P116392_mk(s) {
     checkStack(s.depth);
     return {
-        parent: s, fn: createSnowMan__P115919, depth: s.depth + 1,
+        parent: s, fn: createSnowMan__P116392, depth: s.depth + 1,
         pc: 0, retval: undefined, r0: undefined, overwrittenPC: false, lambdaArgs: null,
   tmp_0: undefined,
   tmp_1: undefined,
 } }
 
-const _hex115925 = pxsim.BufferMethods.createBufferFromHex("870410001000000000000000000000000000000000000000000000002002000000000000201211000000ff0022111101ff2f1f2112111111fff21f1112221211fff2111122221211fff2f11112111111fff211141211111100f0f114121f111f00f0001410111f010000000000111100000000000000000000000000000000000000000000000000")
+const _hex116398 = pxsim.BufferMethods.createBufferFromHex("870410001000000000000000000000000000000000000000000000002002000000000000201211000000ff0022111101ff2f1f2112111111fff21f1112221211fff2111122221211fff2f11112111111fff211141211111100f0f114121f111f00f0001410111f010000000000111100000000000000000000000000000000000000000000000000")
 
 
 
@@ -27752,7 +27438,7 @@ function info_onCountdownEnd__P93781_mk(s) {
 
 
 
-function createSnowBall__P115953(s) {
+function createSnowBall__P116426(s) {
 let r0 = s.r0, step = s.pc;
 s.pc = -1;
 
@@ -27763,7 +27449,7 @@ switch (step) {
   case 0:
 
     s.tmp_0 = darts_create__P95526_mk(s);
-    r0 = pxsim.image.ofBuffer(_hex116007);
+    r0 = pxsim.image.ofBuffer(_hex116480);
     s.tmp_0.arg0 = r0;
     s.tmp_0.arg1 = 1;
     s.tmp_0.arg2 = 10;
@@ -27771,35 +27457,35 @@ switch (step) {
     s.callLocIdx = 90; s.pc = 1; return s.tmp_0;
   case 1:
     r0 = s.retval;
-    globals.snowBall___115983 = (r0);
+    globals.snowBall___116456 = (r0);
     s.tmp_0 = Dart_controlWithArrowKeys__P95544_mk(s);
-    s.tmp_0.arg0 = globals.snowBall___115983;
+    s.tmp_0.arg0 = globals.snowBall___116456;
     s.tmp_0.arg1 = true;
     s.callLocIdx = 91; s.pc = 2; return s.tmp_0;
   case 2:
     r0 = s.retval;
     s.tmp_0 = Dart_setTrace__P95541_mk(s);
-    s.tmp_0.arg0 = globals.snowBall___115983;
+    s.tmp_0.arg0 = globals.snowBall___116456;
     s.tmp_0.arg1 = true;
     s.callLocIdx = 92; s.pc = 3; return s.tmp_0;
   case 3:
     r0 = s.retval;
-    globals.canThrow___115938 = (true);
+    globals.canThrow___116411 = (true);
     r0 = undefined;
     return leave(s, r0)
   default: oops()
 } } }
-createSnowBall__P115953.info = {"start":22814,"length":312,"line":197,"column":0,"endLine":209,"endColumn":1,"fileName":"main.ts","functionName":"createSnowBall","argumentNames":[]}
+createSnowBall__P116426.info = {"start":22814,"length":312,"line":197,"column":0,"endLine":209,"endColumn":1,"fileName":"main.ts","functionName":"createSnowBall","argumentNames":[]}
 
-function createSnowBall__P115953_mk(s) {
+function createSnowBall__P116426_mk(s) {
     checkStack(s.depth);
     return {
-        parent: s, fn: createSnowBall__P115953, depth: s.depth + 1,
+        parent: s, fn: createSnowBall__P116426, depth: s.depth + 1,
         pc: 0, retval: undefined, r0: undefined, overwrittenPC: false, lambdaArgs: null,
   tmp_0: undefined,
 } }
 
-const _hex116007 = pxsim.BufferMethods.createBufferFromHex("8704060006000000009900009011090019119100191191009011090000990000")
+const _hex116480 = pxsim.BufferMethods.createBufferFromHex("8704060006000000009900009011090019119100191191009011090000990000")
 
 
 
@@ -33109,7 +32795,7 @@ function scene_OverlapHandler_constructor__P93953_mk(s) {
 
 
 
-function throwSnowBall__P115944(s) {
+function throwSnowBall__P116417(s) {
 let r0 = s.r0, step = s.pc;
 s.pc = -1;
 
@@ -33120,11 +32806,11 @@ switch (step) {
   case 0:
 
     s.tmp_0 = Dart_throwDart__P95542_mk(s);
-    s.tmp_0.arg0 = globals.snowBall___115983;
+    s.tmp_0.arg0 = globals.snowBall___116456;
     s.callLocIdx = 83; s.pc = 1; return s.tmp_0;
   case 1:
     r0 = s.retval;
-    globals.canThrow___115938 = (false);
+    globals.canThrow___116411 = (false);
     s.tmp_0 = music_playTone__P93088_mk(s);
     s.tmp_0.arg0 = 131;
     s.tmp_1 = music_beat__P93204_mk(s);
@@ -33140,12 +32826,12 @@ switch (step) {
     return leave(s, r0)
   default: oops()
 } } }
-throwSnowBall__P115944.info = {"start":21819,"length":130,"line":168,"column":0,"endLine":172,"endColumn":1,"fileName":"main.ts","functionName":"throwSnowBall","argumentNames":[]}
+throwSnowBall__P116417.info = {"start":21819,"length":130,"line":168,"column":0,"endLine":172,"endColumn":1,"fileName":"main.ts","functionName":"throwSnowBall","argumentNames":[]}
 
-function throwSnowBall__P115944_mk(s) {
+function throwSnowBall__P116417_mk(s) {
     checkStack(s.depth);
     return {
-        parent: s, fn: throwSnowBall__P115944, depth: s.depth + 1,
+        parent: s, fn: throwSnowBall__P116417, depth: s.depth + 1,
         pc: 0, retval: undefined, r0: undefined, overwrittenPC: false, lambdaArgs: null,
   tmp_0: undefined,
   tmp_1: undefined,
@@ -51471,20 +51157,6 @@ function Sprite___visible__P93618_mk(s) {
 
 
 
-function if_handler_1_mk(s) {
-    checkStack(s.depth);
-    return {
-        parent: s, fn: null, depth: s.depth + 1,
-        pc: 0, retval: undefined, r0: undefined, overwrittenPC: false, lambdaArgs: null,
-  tmp_0: undefined,
-  tmp_1: undefined,
-  tmp_2: undefined,
-  tmp_3: undefined,
-  tmp_4: undefined,
-  arg0: undefined,
-} }
-
-
 function lambda_3_mk(s) {
     checkStack(s.depth);
     return {
@@ -51498,6 +51170,20 @@ function lambda_3_mk(s) {
   arg0: undefined,
   arg1: undefined,
   arg2: undefined,
+} }
+
+
+function if_handler_1_mk(s) {
+    checkStack(s.depth);
+    return {
+        parent: s, fn: null, depth: s.depth + 1,
+        pc: 0, retval: undefined, r0: undefined, overwrittenPC: false, lambdaArgs: null,
+  tmp_0: undefined,
+  tmp_1: undefined,
+  tmp_2: undefined,
+  tmp_3: undefined,
+  tmp_4: undefined,
+  arg0: undefined,
 } }
 
 
@@ -52844,26 +52530,11 @@ const Sprite__C93575_VT = mkVTable({
   },
   toStringMethod: Sprite_toString__P93652,
 });
-const scene_GameForeverHandler__C93958_VT = mkVTable({
-  name: "GameForeverHandler",
-  numFields: 2,
-  classNo: 24,
-  lastSubtypeNo: 24,
-  maxBgInstances: null,
-  methods: {
-  },
-  iface: {
-    "lock": null,
-    "set/lock": null,
-    "handler": null,
-    "set/handler": null,
-  },
-});
 const sprites_SpriteSet__C93673_VT = mkVTable({
   name: "SpriteSet",
   numFields: 1,
-  classNo: 25,
-  lastSubtypeNo: 25,
+  classNo: 24,
+  lastSubtypeNo: 24,
   maxBgInstances: null,
   methods: {
   },
@@ -52882,8 +52553,8 @@ const sprites_SpriteSet__C93673_VT = mkVTable({
 const control_EventContext__C91871_VT = mkVTable({
   name: "EventContext",
   numFields: 9,
-  classNo: 26,
-  lastSubtypeNo: 26,
+  classNo: 25,
+  lastSubtypeNo: 25,
   maxBgInstances: null,
   methods: {
   },
@@ -52918,8 +52589,8 @@ const control_EventContext__C91871_VT = mkVTable({
 const control_FrameCallback__C91868_VT = mkVTable({
   name: "FrameCallback",
   numFields: 2,
-  classNo: 27,
-  lastSubtypeNo: 27,
+  classNo: 26,
+  lastSubtypeNo: 26,
   maxBgInstances: null,
   methods: {
   },
@@ -52933,8 +52604,8 @@ const control_FrameCallback__C91868_VT = mkVTable({
 const control_PollEvent__C95617_VT = mkVTable({
   name: "PollEvent",
   numFields: 6,
-  classNo: 28,
-  lastSubtypeNo: 28,
+  classNo: 27,
+  lastSubtypeNo: 27,
   maxBgInstances: null,
   methods: {
   },
@@ -52956,8 +52627,8 @@ const control_PollEvent__C95617_VT = mkVTable({
 const control_EventHandler__C95638_VT = mkVTable({
   name: "EventHandler",
   numFields: 4,
-  classNo: 29,
-  lastSubtypeNo: 29,
+  classNo: 28,
+  lastSubtypeNo: 28,
   maxBgInstances: null,
   methods: {
   },
@@ -52977,8 +52648,8 @@ const control_EventHandler__C95638_VT = mkVTable({
 const scene_Scene__C93979_VT = mkVTable({
   name: "Scene",
   numFields: 23,
-  classNo: 30,
-  lastSubtypeNo: 30,
+  classNo: 29,
+  lastSubtypeNo: 29,
   maxBgInstances: null,
   methods: {
   },
@@ -53040,8 +52711,8 @@ const scene_Scene__C93979_VT = mkVTable({
 const info_PlayerInfo__C93792_VT = mkVTable({
   name: "PlayerInfo",
   numFields: 12,
-  classNo: 31,
-  lastSubtypeNo: 31,
+  classNo: 30,
+  lastSubtypeNo: 30,
   maxBgInstances: null,
   methods: {
   },
@@ -53087,8 +52758,8 @@ const info_PlayerInfo__C93792_VT = mkVTable({
 const info_InfoState__C95862_VT = mkVTable({
   name: "InfoState",
   numFields: 10,
-  classNo: 32,
-  lastSubtypeNo: 32,
+  classNo: 31,
+  lastSubtypeNo: 31,
   maxBgInstances: null,
   methods: {
   },
@@ -53147,8 +52818,8 @@ const scene_Renderable__C93938_VT = mkVTable({
 const info_PlayerState__C93763_VT = mkVTable({
   name: "PlayerState",
   numFields: 3,
-  classNo: 33,
-  lastSubtypeNo: 33,
+  classNo: 32,
+  lastSubtypeNo: 32,
   maxBgInstances: null,
   methods: {
   },
@@ -53164,8 +52835,8 @@ const info_PlayerState__C93763_VT = mkVTable({
 const PhysicsEngine__C93721_VT = mkVTable({
   name: "PhysicsEngine",
   numFields: 0,
-  classNo: 34,
-  lastSubtypeNo: 35,
+  classNo: 33,
+  lastSubtypeNo: 34,
   maxBgInstances: null,
   methods: {
     "addSprite": PhysicsEngine_addSprite__P93723,
@@ -53185,8 +52856,8 @@ const PhysicsEngine__C93721_VT = mkVTable({
 const game_Hitbox__C93471_VT = mkVTable({
   name: "Hitbox",
   numFields: 7,
-  classNo: 36,
-  lastSubtypeNo: 36,
+  classNo: 35,
+  lastSubtypeNo: 35,
   maxBgInstances: null,
   methods: {
   },
@@ -53215,8 +52886,8 @@ const game_Hitbox__C93471_VT = mkVTable({
 const tiles_TileMap__C93883_VT = mkVTable({
   name: "TileMap",
   numFields: 4,
-  classNo: 37,
-  lastSubtypeNo: 37,
+  classNo: 36,
+  lastSubtypeNo: 36,
   maxBgInstances: null,
   methods: {
   },
@@ -53251,8 +52922,8 @@ const tiles_TileMap__C93883_VT = mkVTable({
 const tiles_Location__C93855_VT = mkVTable({
   name: "Location",
   numFields: 3,
-  classNo: 38,
-  lastSubtypeNo: 38,
+  classNo: 37,
+  lastSubtypeNo: 37,
   maxBgInstances: null,
   methods: {
   },
@@ -53274,8 +52945,8 @@ const tiles_Location__C93855_VT = mkVTable({
 const tiles_TileMapData__C93870_VT = mkVTable({
   name: "TileMapData",
   numFields: 7,
-  classNo: 39,
-  lastSubtypeNo: 39,
+  classNo: 38,
+  lastSubtypeNo: 38,
   maxBgInstances: null,
   methods: {
   },
@@ -53307,8 +52978,8 @@ const tiles_TileMapData__C93870_VT = mkVTable({
 const scene_Background__C93831_VT = mkVTable({
   name: "Background",
   numFields: 4,
-  classNo: 40,
-  lastSubtypeNo: 40,
+  classNo: 39,
+  lastSubtypeNo: 39,
   maxBgInstances: null,
   methods: {
   },
@@ -53330,8 +53001,8 @@ const scene_Background__C93831_VT = mkVTable({
 const game_BaseDialog__C94037_VT = mkVTable({
   name: "BaseDialog",
   numFields: 11,
-  classNo: 41,
-  lastSubtypeNo: 43,
+  classNo: 40,
+  lastSubtypeNo: 42,
   maxBgInstances: null,
   methods: {
     "update": game_BaseDialog_update__P94050,
@@ -53379,8 +53050,8 @@ const game_BaseDialog__C94037_VT = mkVTable({
 const game_Dialog__C94054_VT = mkVTable({
   name: "Dialog",
   numFields: 13,
-  classNo: 42,
-  lastSubtypeNo: 42,
+  classNo: 41,
+  lastSubtypeNo: 41,
   maxBgInstances: null,
   methods: {
     "update": game_BaseDialog_update__P94050,
@@ -53499,8 +53170,8 @@ const particles_ParticleSource__C94239_VT = mkVTable({
 const effects_ImageEffect__C94377_VT = mkVTable({
   name: "ImageEffect",
   numFields: 4,
-  classNo: 44,
-  lastSubtypeNo: 44,
+  classNo: 43,
+  lastSubtypeNo: 43,
   maxBgInstances: null,
   methods: {
   },
@@ -53521,8 +53192,8 @@ const effects_ImageEffect__C94377_VT = mkVTable({
 const effects_ParticleEffect__C94350_VT = mkVTable({
   name: "ParticleEffect",
   numFields: 3,
-  classNo: 45,
-  lastSubtypeNo: 46,
+  classNo: 44,
+  lastSubtypeNo: 45,
   maxBgInstances: null,
   methods: {
   },
@@ -53540,8 +53211,8 @@ const effects_ParticleEffect__C94350_VT = mkVTable({
 const effects_ScreenEffect__C94354_VT = mkVTable({
   name: "ScreenEffect",
   numFields: 5,
-  classNo: 46,
-  lastSubtypeNo: 46,
+  classNo: 45,
+  lastSubtypeNo: 45,
   maxBgInstances: null,
   methods: {
   },
@@ -53565,8 +53236,8 @@ const effects_ScreenEffect__C94354_VT = mkVTable({
 const particles_ParticleFactory__C94275_VT = mkVTable({
   name: "ParticleFactory",
   numFields: 0,
-  classNo: 47,
-  lastSubtypeNo: 52,
+  classNo: 46,
+  lastSubtypeNo: 51,
   maxBgInstances: null,
   methods: {
     "createParticle": particles_ParticleFactory_createParticle__P94277,
@@ -53580,8 +53251,8 @@ const particles_ParticleFactory__C94275_VT = mkVTable({
 const particles_SprayFactory__C94279_VT = mkVTable({
   name: "SprayFactory",
   numFields: 3,
-  classNo: 48,
-  lastSubtypeNo: 51,
+  classNo: 47,
+  lastSubtypeNo: 50,
   maxBgInstances: null,
   methods: {
     "createParticle": particles_SprayFactory_createParticle__P94281,
@@ -53603,8 +53274,8 @@ const particles_SprayFactory__C94279_VT = mkVTable({
 const particles_AreaFactory__C94285_VT = mkVTable({
   name: "AreaFactory",
   numFields: 8,
-  classNo: 49,
-  lastSubtypeNo: 51,
+  classNo: 48,
+  lastSubtypeNo: 50,
   maxBgInstances: null,
   methods: {
     "createParticle": particles_AreaFactory_createParticle__P94291,
@@ -53636,8 +53307,8 @@ const particles_AreaFactory__C94285_VT = mkVTable({
 const particles_ShapeFactory__C94301_VT = mkVTable({
   name: "ShapeFactory",
   numFields: 11,
-  classNo: 50,
-  lastSubtypeNo: 51,
+  classNo: 49,
+  lastSubtypeNo: 50,
   maxBgInstances: null,
   methods: {
     "createParticle": particles_ShapeFactory_createParticle__P94305,
@@ -53676,8 +53347,8 @@ const particles_ShapeFactory__C94301_VT = mkVTable({
 const particles_ConfettiFactory__C94306_VT = mkVTable({
   name: "ConfettiFactory",
   numFields: 11,
-  classNo: 51,
-  lastSubtypeNo: 51,
+  classNo: 50,
+  lastSubtypeNo: 50,
   maxBgInstances: null,
   methods: {
     "createParticle": particles_ShapeFactory_createParticle__P94305,
@@ -53716,8 +53387,8 @@ const particles_ConfettiFactory__C94306_VT = mkVTable({
 const particles_Particle__C94220_VT = mkVTable({
   name: "Particle",
   numFields: 8,
-  classNo: 53,
-  lastSubtypeNo: 53,
+  classNo: 52,
+  lastSubtypeNo: 52,
   maxBgInstances: 200,
   methods: {
   },
@@ -53743,8 +53414,8 @@ const particles_Particle__C94220_VT = mkVTable({
 const scene_Camera__C93920_VT = mkVTable({
   name: "Camera",
   numFields: 8,
-  classNo: 54,
-  lastSubtypeNo: 54,
+  classNo: 53,
+  lastSubtypeNo: 53,
   maxBgInstances: null,
   methods: {
   },
@@ -53779,8 +53450,8 @@ const scene_Camera__C93920_VT = mkVTable({
 const scene_BackgroundLayer__C93841_VT = mkVTable({
   name: "BackgroundLayer",
   numFields: 6,
-  classNo: 55,
-  lastSubtypeNo: 55,
+  classNo: 54,
+  lastSubtypeNo: 54,
   maxBgInstances: null,
   methods: {
   },
@@ -53803,8 +53474,8 @@ const scene_BackgroundLayer__C93841_VT = mkVTable({
 const controller_Controller__C93409_VT = mkVTable({
   name: "Controller",
   numFields: 5,
-  classNo: 56,
-  lastSubtypeNo: 56,
+  classNo: 55,
+  lastSubtypeNo: 55,
   maxBgInstances: null,
   methods: {
   },
@@ -53838,8 +53509,8 @@ const controller_Controller__C93409_VT = mkVTable({
 const ArcadePhysicsEngine__C93737_VT = mkVTable({
   name: "ArcadePhysicsEngine",
   numFields: 6,
-  classNo: 35,
-  lastSubtypeNo: 35,
+  classNo: 34,
+  lastSubtypeNo: 34,
   maxBgInstances: null,
   methods: {
     "addSprite": ArcadePhysicsEngine_addSprite__P93746,
@@ -53883,8 +53554,8 @@ const ArcadePhysicsEngine__C93737_VT = mkVTable({
 const sprites_SpriteMap__C93656_VT = mkVTable({
   name: "SpriteMap",
   numFields: 5,
-  classNo: 57,
-  lastSubtypeNo: 57,
+  classNo: 56,
+  lastSubtypeNo: 56,
   maxBgInstances: null,
   methods: {
   },
@@ -53915,8 +53586,8 @@ const sprites_SpriteMap__C93656_VT = mkVTable({
 const game_GameOverDialog__C94076_VT = mkVTable({
   name: "GameOverDialog",
   numFields: 16,
-  classNo: 43,
-  lastSubtypeNo: 43,
+  classNo: 42,
+  lastSubtypeNo: 42,
   maxBgInstances: null,
   methods: {
     "update": game_GameOverDialog_update__P94079,
@@ -53975,8 +53646,8 @@ const game_GameOverDialog__C94076_VT = mkVTable({
 const Dart__C95530_VT = mkVTable({
   name: "Dart",
   numFields: 12,
-  classNo: 58,
-  lastSubtypeNo: 58,
+  classNo: 57,
+  lastSubtypeNo: 57,
   maxBgInstances: null,
   methods: {
   },
@@ -54013,8 +53684,8 @@ const Dart__C95530_VT = mkVTable({
 const particles_RadialFactory__C94312_VT = mkVTable({
   name: "RadialFactory",
   numFields: 6,
-  classNo: 52,
-  lastSubtypeNo: 52,
+  classNo: 51,
+  lastSubtypeNo: 51,
   maxBgInstances: null,
   methods: {
     "createParticle": particles_RadialFactory_createParticle__P94314,
@@ -54041,8 +53712,8 @@ const particles_RadialFactory__C94312_VT = mkVTable({
 const music_MelodyPlayer__C93102_VT = mkVTable({
   name: "MelodyPlayer",
   numFields: 2,
-  classNo: 59,
-  lastSubtypeNo: 59,
+  classNo: 58,
+  lastSubtypeNo: 58,
   maxBgInstances: null,
   methods: {
   },
@@ -54059,8 +53730,8 @@ const music_MelodyPlayer__C93102_VT = mkVTable({
 const scene_OverlapHandler__C93952_VT = mkVTable({
   name: "OverlapHandler",
   numFields: 3,
-  classNo: 60,
-  lastSubtypeNo: 60,
+  classNo: 59,
+  lastSubtypeNo: 59,
   maxBgInstances: null,
   methods: {
   },
@@ -54076,8 +53747,8 @@ const scene_OverlapHandler__C93952_VT = mkVTable({
 const scene_systemMenu_PauseMenu__C94183_VT = mkVTable({
   name: "PauseMenu",
   numFields: 7,
-  classNo: 61,
-  lastSubtypeNo: 61,
+  classNo: 60,
+  lastSubtypeNo: 60,
   maxBgInstances: null,
   methods: {
   },
@@ -54107,8 +53778,8 @@ const scene_systemMenu_PauseMenu__C94183_VT = mkVTable({
 const scene_systemMenu_MenuOption__C94175_VT = mkVTable({
   name: "MenuOption",
   numFields: 8,
-  classNo: 62,
-  lastSubtypeNo: 62,
+  classNo: 61,
+  lastSubtypeNo: 61,
   maxBgInstances: null,
   methods: {
   },
@@ -54141,8 +53812,8 @@ const scene_systemMenu_MenuOption__C94175_VT = mkVTable({
 const MovingSprite__C93735_VT = mkVTable({
   name: "MovingSprite",
   numFields: 7,
-  classNo: 63,
-  lastSubtypeNo: 63,
+  classNo: 62,
+  lastSubtypeNo: 62,
   maxBgInstances: null,
   methods: {
   },
@@ -54166,8 +53837,8 @@ const MovingSprite__C93735_VT = mkVTable({
 const sprites_StaticObstacle__C93708_VT = mkVTable({
   name: "StaticObstacle",
   numFields: 5,
-  classNo: 64,
-  lastSubtypeNo: 64,
+  classNo: 63,
+  lastSubtypeNo: 63,
   maxBgInstances: null,
   methods: {
   },
@@ -54191,8 +53862,8 @@ const sprites_StaticObstacle__C93708_VT = mkVTable({
 const effects_SceneAnchor__C96367_VT = mkVTable({
   name: "SceneAnchor",
   numFields: 1,
-  classNo: 65,
-  lastSubtypeNo: 65,
+  classNo: 64,
+  lastSubtypeNo: 64,
   maxBgInstances: null,
   methods: {
   },
@@ -54208,8 +53879,8 @@ const effects_SceneAnchor__C96367_VT = mkVTable({
 const sprites_BaseSpriteSayRenderer__C93511_VT = mkVTable({
   name: "BaseSpriteSayRenderer",
   numFields: 3,
-  classNo: 66,
-  lastSubtypeNo: 66,
+  classNo: 65,
+  lastSubtypeNo: 65,
   maxBgInstances: null,
   methods: {
     "draw": sprites_BaseSpriteSayRenderer_draw__P93513,
@@ -54229,7 +53900,7 @@ const sprites_BaseSpriteSayRenderer__C93511_VT = mkVTable({
   },
 });
 
-const breakpoints = setupDebugger(1, ["transparency16___95557","tile1___95558","Target___115917","canThrow___115938","gameOn___115941","target___115974","snowMan___115921","snowBall___115983"])
+const breakpoints = setupDebugger(1, ["transparency16___95557","tile1___95558","Target___116390","canThrow___116411","gameOn___116414","target___116447","snowMan___116394","snowBall___116456"])
 
-return _main___P116327
+return _main___P116602
 })
