@@ -25,9 +25,7 @@ function createSnowMan () {
 }
 controller.A.onEvent(ControllerButtonEvent.Pressed, function () {
     if (canThrow && gameOn) {
-        snowBall.throwDart()
-        canThrow = false
-        music.thump.playUntilDone()
+        throwSnowBall()
     }
 })
 function startGame () {
@@ -168,6 +166,11 @@ sprites.onOverlap(SpriteKind.Projectile, SpriteKind.Target, function (sprite, ot
     target.setPosition(randint(20, 150), randint(10, 100))
     createSnowBall()
 })
+function throwSnowBall () {
+    snowBall.throwDart()
+    canThrow = false
+    music.thump.play()
+}
 info.onCountdownEnd(function () {
     game.over(true)
 })
@@ -205,8 +208,8 @@ function createSnowBall () {
     snowBall.setTrace()
     canThrow = true
 }
-let target: Sprite = null
 let snowBall: Dart = null
+let target: Sprite = null
 let canThrow = false
 let snowMan: Sprite = null
 let gameOn = false
