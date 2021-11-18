@@ -169,7 +169,7 @@ sprites.onOverlap(SpriteKind.Projectile, SpriteKind.Target, function (sprite, ot
 function throwSnowBall () {
     snowBall.throwDart()
     canThrow = false
-    music.thump.play()
+    music.playTone(131, music.beat(BeatFraction.Half))
 }
 info.onCountdownEnd(function () {
     game.over(true)
