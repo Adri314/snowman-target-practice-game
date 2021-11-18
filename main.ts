@@ -24,8 +24,8 @@ function createSnowMan () {
     snowMan.z = 10
 }
 controller.A.onEvent(ControllerButtonEvent.Pressed, function () {
-    music.thump.play()
-    if (canThrow) {
+    if (canThrow && gameOn) {
+        music.thump.play()
         snowBall.throwDart()
         canThrow = false
     }
@@ -159,6 +159,7 @@ function startGame () {
     createTarget()
     info.setScore(0)
     info.startCountdown(60)
+    gameOn = true
 }
 sprites.onOverlap(SpriteKind.Projectile, SpriteKind.Target, function (sprite, otherSprite) {
     music.smallCrash.play()
@@ -208,6 +209,8 @@ let target: Sprite = null
 let snowBall: Dart = null
 let canThrow = false
 let snowMan: Sprite = null
+let gameOn = false
+gameOn = false
 scene.setBackgroundColor(8)
 game.setDialogCursor(img`
     . . . . 9 f f f f f 9 . . . . . 
