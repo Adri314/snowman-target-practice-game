@@ -25,9 +25,9 @@ function createSnowMan () {
 }
 controller.A.onEvent(ControllerButtonEvent.Pressed, function () {
     if (canThrow && gameOn) {
-        music.thump.play()
         snowBall.throwDart()
         canThrow = false
+        music.thump.playUntilDone()
     }
 })
 function startGame () {
